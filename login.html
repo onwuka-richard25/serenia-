@@ -1,0 +1,99 @@
+<!doctype html>
+<html lang="en">
+  <head>
+    <meta charset="UTF-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <title>Login - Serenia</title>
+    <link rel="stylesheet" href="../src/output.css" />
+    <link
+      rel="stylesheet"
+      href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.5.1/css/all.min.css"
+    />
+  </head>
+  <body class="bg-[#f7f5f1] min-h-screen text-gray-800">
+    <div class="grid min-h-screen grid-cols-1 lg:grid-cols-2">
+      <div class="relative hidden lg:block">
+        <img src="./assets/ddvdfd.png" alt="house" class="h-full w-full object-cover" />
+        <div class="absolute inset-0 bg-gradient-to-b from-black/20 via-black/10 to-black/40"></div>
+
+        <div class="absolute inset-x-0 top-10 px-10 z-10">
+          <img src="./assets/gglolgo.png" alt="serenia logo" class="mx-auto w-36" />
+        </div>
+
+        <div class="absolute inset-x-0 bottom-10 z-10 px-8">
+          <div class="flex items-center justify-between gap-6 text-white/90">
+            <span class="text-2xl font-medium">Serenia House</span>
+            <span class="max-w-md text-right text-sm leading-relaxed text-white/75"
+              >Every house is built with sincerity and enthusiasm to help families create moments
+              together inside it.</span
+            >
+          </div>
+          <div class="mt-6 flex gap-3">
+            <div class="divider-line flex-1 rounded-full"></div>
+            <div class="divider-line flex-1 rounded-full opacity-60"></div>
+            <div class="divider-line flex-1 rounded-full opacity-60"></div>
+            <div class="divider-line flex-1 rounded-full opacity-60"></div>
+          </div>
+        </div>
+      </div>
+
+      <div class="flex items-center justify-center bg-white px-6 py-10">
+        <div class="w-full max-w-md reveal">
+          <div class="mb-8">
+            <h1 class="text-4xl font-medium text-gray-900">Welcome back!</h1>
+            <p class="mt-2 text-sm text-gray-500">
+              Please log in to manage your properties and clusters
+            </p>
+          </div>
+
+          <form class="space-y-5">
+            <div>
+              <label class="block text-sm font-medium text-gray-900 mb-2">Email address</label>
+              <input
+                type="email"
+                placeholder="Enter your email"
+                class="form-input py-3 px-4 rounded-xl placeholder-gray-400"
+                required
+              />
+            </div>
+
+            <div>
+              <label class="block text-sm font-medium text-gray-900 mb-2">Password</label>
+              <div class="relative">
+                <input
+                  type="password"
+                  placeholder="Enter your password"
+                  class="form-input py-3 pl-4 pr-12 rounded-xl placeholder-gray-400"
+                  required
+                />
+                <i
+                  class="fa-regular fa-eye-slash absolute right-4 top-1/2 -translate-y-1/2 text-gray-500"
+                ></i>
+              </div>
+            </div>
+
+            <button type="submit" class="primary-btn w-full py-3 px-4 rounded-xl font-medium">
+              Login now
+            </button>
+
+            <div class="text-center">
+              <a
+                href="./forgotpwd.html"
+                class="inline-block relative text-sm font-medium text-gray-700 after:absolute after:bottom-0 after:left-1/2 after:h-[1px] after:w-0 after:-translate-x-1/2 after:bg-current after:transition-all after:duration-300 hover:after:w-full"
+                >Forgot password?</a
+              >
+            </div>
+          </form>
+
+          <div class="mt-12 text-center text-sm text-gray-500">
+            <span
+              >If you don't have an account, please
+              <a href="./contactus.html" class="font-medium text-gray-800 underline">contact</a> the
+              system administrator to request access.</span
+            >
+          </div>
+        </div>
+      </div>
+    </div>
+  </body>
+</html>

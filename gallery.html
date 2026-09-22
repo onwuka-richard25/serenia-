@@ -1,0 +1,96 @@
+<!doctype html>
+<html lang="en">
+  <head>
+    <meta charset="UTF-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <title>Gallery - Serenia</title>
+    <link rel="stylesheet" href="../src/output.css" />
+    <link
+      rel="stylesheet"
+      href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.5.1/css/all.min.css"
+    />
+  </head>
+  <body class="bg-[#f7f5f1] min-h-screen text-gray-800">
+    <nav class="site-nav h-24 w-full px-6 md:px-16 items-center flex justify-between text-base">
+      <div class="flex items-center gap-2 font-bold text-2xl text-gray-900">
+        <a href="./home.html" aria-label="Serenia home">
+          <img src="./assets/Logo (1).png" alt="logo" class="w-auto block" />
+        </a>
+      </div>
+      <div>
+        <ul class="flex gap-8 lg:gap-12 items-center text-[18px] text-gray-600 font-medium">
+          <li class="nav-link">
+            <a href="./properties.html" class="inline-flex items-center gap-1"
+              >Properties <i class="fa-solid text-xs fa-caret-down ml-1 dropdown-icon"></i
+            ></a>
+          </li>
+          <li class="nav-link"><a href="./amenities.html">Amenities</a></li>
+          <li class="nav-link text-gray-900 border-b-2 border-gray-900 pb-2">
+            <a href="./gallery.html" class="inline-flex items-center gap-1"
+              >Gallery <i class="fa-solid text-xs fa-caret-down ml-1 dropdown-icon"></i
+            ></a>
+          </li>
+          <li class="nav-link"><a href="./blogs.html">Blogs</a></li>
+        </ul>
+      </div>
+      <div>
+        <ul class="flex gap-4 lg:gap-6 items-center">
+          <li class="nav-link px-4 py-3 font-medium cursor-pointer text-gray-600">
+            <a href="./contactus.html">Contact us</a>
+          </li>
+          <li
+            class="action-btn bg-[#f3f3f3] font-medium px-5 py-3 text-gray-800 cursor-pointer rounded-md"
+          >
+            <a href="./contactus.html">Request tour</a>
+          </li>
+        </ul>
+      </div>
+    </nav>
+
+    <main class="site-shell px-4 py-10 lg:px-8 lg:py-14">
+      <section class="text-center py-8 lg:py-14 reveal">
+        <p class="text-sm uppercase tracking-[0.24em] text-gray-500">Explore the life</p>
+        <h1 class="hero-title mt-4 text-5xl lg:text-7xl font-medium leading-tight text-gray-900">
+          A glimpse into daily elegance
+        </h1>
+      </section>
+
+      <section class="grid grid-cols-1 md:grid-cols-2 xl:grid-cols-3 gap-6 mt-6">
+        <div class="gallery-card image-zoom overflow-hidden rounded-[26px] reveal">
+          <img
+            src="./assets/aruna.png"
+            alt="Residence exterior"
+            class="w-full h-[420px] object-cover"
+          />
+        </div>
+        <div class="gallery-card image-zoom overflow-hidden rounded-[26px] reveal delay-1">
+          <img
+            src="./assets/mainhero.png"
+            alt="Lifestyle shot"
+            class="w-full h-[420px] object-cover"
+          />
+        </div>
+        <div class="gallery-card image-zoom overflow-hidden rounded-[26px] reveal delay-2">
+          <img
+            src="./assets/Image Container.png"
+            alt="Luxury home"
+            class="w-full h-[420px] object-cover"
+          />
+        </div>
+        <div class="gallery-card image-zoom overflow-hidden rounded-[26px] reveal delay-1">
+          <img src="./assets/nava.png" alt="Modern terrace" class="w-full h-[420px] object-cover" />
+        </div>
+        <div class="gallery-card image-zoom overflow-hidden rounded-[26px] reveal delay-2">
+          <img src="./assets/velora.png" alt="Park view" class="w-full h-[420px] object-cover" />
+        </div>
+        <div class="gallery-card image-zoom overflow-hidden rounded-[26px] reveal delay-3">
+          <img
+            src="./assets/seraya.png"
+            alt="Family living"
+            class="w-full h-[420px] object-cover"
+          />
+        </div>
+      </section>
+    </main>
+  </body>
+</html>

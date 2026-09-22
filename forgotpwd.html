@@ -1,0 +1,65 @@
+<!doctype html>
+<html lang="en">
+  <head>
+    <meta charset="UTF-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <title>Forgot Password - Serenia</title>
+    <link
+      rel="stylesheet"
+      href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.5.1/css/all.min.css"
+    />
+    <link rel="stylesheet" href="../src/output.css" />
+  </head>
+  <body class="bg-stone-200">
+    <div>
+      <img src="./assets/Logo (1).png" alt="logo" class="h-6 mx-auto mt-10" />
+    </div>
+    <div class="bg-white h-90 w-100 mx-auto mt-20">
+      <h1 class="p-5 pb-3 font-semibold text-[20px]">Forgot Password?</h1>
+      <div class="text-[14px] p-5 pt-0">
+        <span class="text-[#5A5B5B]"
+          >Enter your registered email, and we'll send you a <br />
+          reset link to recover your account.</span
+        >
+      </div>
+      <div class="p-5 text-[12px] font-medium pt-0">
+        Email address <br />
+        <input
+          type="email"
+          class="mt-2 focus:outline-none focus:border-[#56593B] focus:ring-2 focus:ring-[#56593B]/20 focus:rounded-md mb-3 ml-1 p-2 h-10 w-90 shadow-box"
+          placeholder="Enter email address"
+          required
+        />
+      </div>
+      <hr class="border-black/20 mb-5" />
+      <button
+        class="bg-[#56593B] transition-all duration-300 hover:bg-[#43462e] hover:ring-4 hover:ring-[#56593B]/30 text-white h-10 mb-3 w-90 ml-5"
+      >
+        Send reset link
+      </button>
+      <button
+        class="bg-[#E6E8E6] transition-all duration-300 hover:ring-4 hover:ring-[#56593B]/30 h-10 mb-3 w-90 ml-5"
+      >
+        Didn't get the link?
+      </button>
+
+      <div
+        class="w-100 h-20 mt-10 border-2 border-[#F0CD86] bg-linear-to-b from-[#FFF8EB] to-[#FFFFFF] flex"
+      >
+        <div class="p-2">
+          <i class="fa-solid text-[#926100] bg-white h-8 text-center p-2 w-8 fa-circle-info"></i>
+        </div>
+        <div class="leading-tight">
+          <h2 class="font-medium text-[14px] pt-1.5">Important!</h2>
+          <span class="text-[10px] font-normal"
+            >Make sure you enter the correct email address, and if you forget which email address
+            you registered with, contact the system administrator.</span
+          >
+        </div>
+        <div class="h-8 w-5 bg-red p-1 -translate-x-1">
+          <i class="fa-solid fa-xmark"></i>
+        </div>
+      </div>
+    </div>
+  </body>
+</html>

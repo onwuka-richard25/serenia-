@@ -1,0 +1,473 @@
+<!doctype html>
+<html lang="en">
+  <head>
+    <meta charset="UTF-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <title>Properties - Serenia</title>
+    <link rel="stylesheet" href="../src/output.css" />
+    <link
+      rel="stylesheet"
+      href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.5.1/css/all.min.css"
+    />
+  </head>
+  <body class="bg-white font-sans text-gray-800 antialiased min-h-screen">
+    <nav
+      class="site-nav h-24 w-full px-6 md:px-16 items-center flex justify-between border-b border-gray-100 text-base"
+    >
+      <div class="flex items-center gap-2 font-bold text-2xl text-gray-900">
+        <a href="./home.html" aria-label="Serenia home"
+          ><img src="./assets/Logo (1).png" alt="logo" class="w-auto"
+        /></a>
+      </div>
+      <div>
+        <ul class="flex gap-8 lg:gap-12 items-center text-gray-600 text-[18px] font-medium">
+          <li class="nav-link text-gray-900 border-b-2 border-gray-900 pb-2">
+            <a href="./properties.html"
+              >Properties <i class="fa-solid text-xs fa-caret-down ml-1 dropdown-icon"></i
+            ></a>
+          </li>
+          <li class="nav-link"><a href="./amenities.html">Amenities</a></li>
+          <li class="nav-link">
+            <a href="./gallery.html"
+              >Gallery <i class="fa-solid text-xs fa-caret-down ml-1 dropdown-icon"></i
+            ></a>
+          </li>
+          <li class="nav-link"><a href="./blogs.html">Blogs</a></li>
+        </ul>
+      </div>
+      <div>
+        <ul class="flex gap-4 lg:gap-6 items-center">
+          <li class="nav-link px-4 py-3 font-medium text-gray-600">
+            <a href="./contactus.html">Contact us</a>
+          </li>
+          <li class="action-btn bg-[#f3f3f3] font-medium px-5 py-3 text-gray-800 rounded-md">
+            <a href="./contactus.html">Request tour</a>
+          </li>
+        </ul>
+      </div>
+    </nav>
+
+    <main>
+      <section class="text-center bg-white py-16 lg:py-20 px-6 reveal">
+        <h1 class="text-5xl lg:text-7xl font-medium leading-tight text-gray-900 tracking-tight">
+          Every community <br />
+          has its own unique story
+        </h1>
+        <p class="font-normal text-lg lg:text-xl text-gray-500 mt-6 leading-relaxed">
+          Explore thoughtfully designed residences that combine comfort, style, and a sense of
+          belonging.
+        </p>
+      </section>
+
+      <section class="bg-[#f9f9f9] px-6 lg:px-16 py-12 lg:py-16">
+        <div
+          class="w-full max-w-[1400px] mx-auto flex flex-col lg:flex-row items-center justify-between gap-5 mb-8 text-sm text-gray-600"
+        >
+          <div class="flex flex-wrap gap-4">
+            <div
+              class="filter-pill bg-white px-6 py-4 flex items-center justify-between gap-10 cursor-pointer rounded-md text-base"
+            >
+              <span>Location: <strong class="text-gray-800 font-medium">All location</strong></span>
+              <i class="fa-solid fa-caret-down text-gray-700 text-xs"></i>
+            </div>
+            <div
+              class="filter-pill bg-white px-6 py-4 flex items-center justify-between gap-10 cursor-pointer rounded-md text-base"
+            >
+              <span>Price: <strong class="text-gray-800 font-medium">All price</strong></span>
+              <i class="fa-solid fa-caret-down text-gray-700 text-xs"></i>
+            </div>
+          </div>
+          <div class="relative w-full lg:w-96">
+            <i class="fa-solid fa-magnifying-glass absolute left-4 top-4 text-gray-400 text-sm"></i>
+            <input
+              type="text"
+              class="form-input bg-white pl-11 pr-4 py-3.5 rounded-md placeholder-gray-400"
+              placeholder="Search cluster name"
+            />
+          </div>
+        </div>
+
+        <div class="flex flex-col gap-10 max-w-[1400px] mx-auto">
+          <article
+            class="property-card p-3 bg-white border border-gray-100 flex flex-col lg:flex-row min-h-[600px] reveal"
+          >
+            <div class="image-zoom w-full lg:w-1/2 min-h-[320px] lg:min-h-[550px]">
+              <img
+                src="./assets/Image Container.png"
+                alt="Liora estate"
+                class="w-full h-full object-cover"
+              />
+            </div>
+            <div class="w-full lg:w-1/2 p-6 lg:p-14 flex flex-col justify-between">
+              <div>
+                <div
+                  class="inline-flex items-center gap-2.5 px-4 py-2 bg-[#fff8ed] text-[#b37200] text-sm font-medium rounded-md mb-6"
+                >
+                  <i class="fa-solid fa-chart-simple text-xs"></i>Elegant living, redefined
+                </div>
+                <h2 class="text-4xl font-semibold text-gray-900 mb-4">Liora estate</h2>
+                <p class="text-base text-gray-500 leading-relaxed max-w-lg">
+                  Premium cluster with modern architecture, a private clubhouse, and 24/7 security -
+                  offering both style and peace of mind for residents.
+                </p>
+                <ul class="space-y-4 mt-12 text-base text-gray-600">
+                  <li class="flex items-center gap-4">
+                    <i class="fa-solid fa-bed w-5 text-gray-500 text-lg"></i
+                    ><span>3-5 Bedroom options</span>
+                  </li>
+                  <li class="flex items-center gap-4">
+                    <i class="fa-solid fa-lock w-5 text-gray-500 text-lg"></i
+                    ><span>Private gate &amp; 24/7 security</span>
+                  </li>
+                  <li class="flex items-center gap-4">
+                    <i class="fa-solid fa-cart-shopping w-5 text-gray-500 text-lg"></i
+                    ><span>Near lifestyle center</span>
+                  </li>
+                </ul>
+              </div>
+              <div class="pt-6 border-t border-gray-100 flex items-end justify-between mt-10">
+                <div>
+                  <span class="block text-sm text-gray-400 mb-1">Starts from</span
+                  ><span class="text-3xl font-bold text-gray-900">$120,000</span>
+                </div>
+                <button
+                  class="secondary-btn inline-flex items-center gap-2.5 px-7 py-3.5 text-gray-900 text-sm font-medium rounded-md"
+                >
+                  Discover <i class="fa-solid fa-arrow-up-right-from-square text-xs"></i>
+                </button>
+              </div>
+            </div>
+          </article>
+
+          <article
+            class="property-card p-3 bg-white border border-gray-100 flex flex-col lg:flex-row min-h-[600px] reveal delay-1"
+          >
+            <div class="image-zoom w-full lg:w-1/2 min-h-[320px] lg:min-h-[550px]">
+              <img src="./assets/nava.png" alt="Nava heights" class="w-full h-full object-cover" />
+            </div>
+            <div class="w-full lg:w-1/2 p-6 lg:p-14 flex flex-col justify-between">
+              <div>
+                <div
+                  class="inline-flex items-center gap-2.5 px-4 py-2 bg-[#fff8ed] text-[#b37200] text-sm font-medium rounded-md mb-6"
+                >
+                  <i class="fa-solid fa-tree"></i>Nature meets lifestyle
+                </div>
+                <h2 class="text-4xl font-semibold text-gray-900 mb-4">Nava heights</h2>
+                <p class="text-base text-gray-500 leading-relaxed max-w-lg">
+                  Designed for eco-living with wide open scenic jogging tracks, and elevated views
+                  that bring nature closer to home.
+                </p>
+                <ul class="space-y-4 mt-12 text-base text-gray-600">
+                  <li class="flex items-center gap-4">
+                    <i class="fa-solid fa-bed w-5 text-gray-500 text-lg"></i
+                    ><span>2-4 Bedroom options</span>
+                  </li>
+                  <li class="flex items-center gap-4">
+                    <i class="fa-solid fa-road w-5 text-gray-500 text-lg"></i
+                    ><span>Wide roads &amp; open spaces</span>
+                  </li>
+                  <li class="flex items-center gap-4">
+                    <i class="fa-solid fa-person-running w-5 text-gray-500 text-lg"></i
+                    ><span>Scenic jogging tracks</span>
+                  </li>
+                </ul>
+              </div>
+              <div class="pt-6 border-t border-gray-100 flex items-end justify-between mt-10">
+                <div>
+                  <span class="block text-sm text-gray-400 mb-1">Starts from</span
+                  ><span class="text-3xl font-bold text-gray-900">$98,000</span>
+                </div>
+                <button
+                  class="secondary-btn inline-flex items-center gap-2.5 px-7 py-3.5 text-gray-900 text-sm font-medium rounded-md"
+                >
+                  Discover <i class="fa-solid fa-arrow-up-right-from-square text-xs"></i>
+                </button>
+              </div>
+            </div>
+          </article>
+
+          <article
+            class="property-card p-3 bg-white border border-gray-100 flex flex-col lg:flex-row min-h-[600px] reveal delay-2"
+          >
+            <div class="image-zoom w-full lg:w-1/2 min-h-[320px] lg:min-h-[550px]">
+              <img
+                src="./assets/aruna.png"
+                alt="Aruna residence"
+                class="w-full h-full object-cover"
+              />
+            </div>
+            <div class="w-full lg:w-1/2 p-6 lg:p-14 flex flex-col justify-between">
+              <div>
+                <div
+                  class="inline-flex items-center gap-2.5 px-4 py-2 bg-[#fff8ed] text-[#b37200] text-sm font-medium rounded-md mb-6"
+                >
+                  <i class="fa-solid fa-hand-holding-heart text-xs"></i>The modern comfort
+                </div>
+                <h2 class="text-4xl font-semibold text-gray-900 mb-4">Aruna residence</h2>
+                <p class="text-base text-gray-500 leading-relaxed max-w-lg">
+                  Spacious homes with minimalist design, surrounded by lush parks and playgrounds -
+                  the perfect place for families to grow and thrive.
+                </p>
+                <ul class="space-y-4 mt-12 text-base text-gray-600">
+                  <li class="flex items-center gap-4">
+                    <i class="fa-solid fa-bed w-5 text-gray-500 text-lg"></i
+                    ><span>2-4 Bedroom options</span>
+                  </li>
+                  <li class="flex items-center gap-4">
+                    <i class="fa-solid fa-people-group w-5 text-gray-500 text-lg"></i
+                    ><span>Family-friendly facilities</span>
+                  </li>
+                  <li class="flex items-center gap-4">
+                    <i class="fa-solid fa-city w-5 text-gray-500 text-lg"></i
+                    ><span>Easy access to main boulevard</span>
+                  </li>
+                </ul>
+              </div>
+              <div class="pt-6 border-t border-gray-100 flex items-end justify-between mt-10">
+                <div>
+                  <span class="block text-sm text-gray-400 mb-1">Starts from</span
+                  ><span class="text-3xl font-bold text-gray-900">$85,000</span>
+                </div>
+                <button
+                  class="secondary-btn inline-flex items-center gap-2.5 px-7 py-3.5 text-gray-900 text-sm font-medium rounded-md"
+                >
+                  Discover <i class="fa-solid fa-arrow-up-right-from-square text-xs"></i>
+                </button>
+              </div>
+            </div>
+          </article>
+
+          <article
+            class="property-card p-3 bg-white border border-gray-100 flex flex-col lg:flex-row min-h-[600px] reveal delay-3"
+          >
+            <div class="image-zoom w-full lg:w-1/2 min-h-[320px] lg:min-h-[550px]">
+              <img src="./assets/velora.png" alt="Velora park" class="w-full h-full object-cover" />
+            </div>
+            <div class="w-full lg:w-1/2 p-6 lg:p-14 flex flex-col justify-between">
+              <div>
+                <div
+                  class="inline-flex items-center gap-2.5 px-4 py-2 bg-[#fff8ed] text-[#b37200] text-sm font-medium rounded-md mb-6"
+                >
+                  <i class="fa-solid fa-chart-simple text-xs"></i>Dynamic living, urban vibe
+                </div>
+                <h2 class="text-4xl font-semibold text-gray-900 mb-4">Velora park</h2>
+                <p class="text-base text-gray-500 leading-relaxed max-w-lg">
+                  Contemporary cluster with stylish facades, pocket parks, and direct access to
+                  shopping and dining hubs.
+                </p>
+                <ul class="space-y-4 mt-12 text-base text-gray-600">
+                  <li class="flex items-center gap-4">
+                    <i class="fa-solid fa-bed w-5 text-gray-500 text-lg"></i
+                    ><span>2-4 Bedroom options</span>
+                  </li>
+                  <li class="flex items-center gap-4">
+                    <i class="fa-solid fa-building-wheat w-5 text-gray-500 text-lg"></i
+                    ><span>Pocket parks &amp; community spaces</span>
+                  </li>
+                  <li class="flex items-center gap-4">
+                    <i class="fa-solid fa-globe w-5 text-gray-500 text-lg"></i
+                    ><span>Trendy design homes</span>
+                  </li>
+                </ul>
+              </div>
+              <div class="pt-6 border-t border-gray-100 flex items-end justify-between mt-10">
+                <div>
+                  <span class="block text-sm text-gray-400 mb-1">Starts from</span
+                  ><span class="text-3xl font-bold text-gray-900">$105,000</span>
+                </div>
+                <button
+                  class="secondary-btn inline-flex items-center gap-2.5 px-7 py-3.5 text-gray-900 text-sm font-medium rounded-md"
+                >
+                  Discover <i class="fa-solid fa-arrow-up-right-from-square text-xs"></i>
+                </button>
+              </div>
+            </div>
+          </article>
+
+          <article
+            class="property-card p-3 bg-white border border-gray-100 flex flex-col lg:flex-row min-h-[600px] reveal delay-3"
+          >
+            <div class="image-zoom w-full lg:w-1/2 min-h-[320px] lg:min-h-[550px]">
+              <img
+                src="./assets/seraya.png"
+                alt="Seraya grove"
+                class="w-full h-full object-cover"
+              />
+            </div>
+            <div class="w-full lg:w-1/2 p-6 lg:p-14 flex flex-col justify-between">
+              <div>
+                <div
+                  class="inline-flex items-center gap-2.5 px-4 py-2 bg-[#fff8ed] text-[#b37200] text-sm font-medium rounded-md mb-6"
+                >
+                  <i class="fa-solid fa-leaf text-xs"></i>Living with natural touch
+                </div>
+                <h2 class="text-4xl font-semibold text-gray-900 mb-4">Seraya grove</h2>
+                <p class="text-base text-gray-500 leading-relaxed max-w-lg">
+                  A vibrant cluster blending modern housing with lush greenery, close to schools and
+                  community spaces.
+                </p>
+                <ul class="space-y-4 mt-12 text-base text-gray-600">
+                  <li class="flex items-center gap-4">
+                    <i class="fa-solid fa-bed w-5 text-gray-500 text-lg"></i
+                    ><span>3-4 Bedroom options</span>
+                  </li>
+                  <li class="flex items-center gap-4">
+                    <i class="fa-solid fa-basketball w-5 text-gray-500 text-lg"></i
+                    ><span>Central park &amp; kids area</span>
+                  </li>
+                  <li class="flex items-center gap-4">
+                    <i class="fa-regular fa-futbol w-5 text-gray-500 text-lg"></i
+                    ><span>Easy access to public facilities</span>
+                  </li>
+                </ul>
+              </div>
+              <div class="pt-6 border-t border-gray-100 flex items-end justify-between mt-10">
+                <div>
+                  <span class="block text-sm text-gray-400 mb-1">Starts from</span
+                  ><span class="text-3xl font-bold text-gray-900">$95,000</span>
+                </div>
+                <button
+                  class="secondary-btn inline-flex items-center gap-2.5 px-7 py-3.5 text-gray-900 text-sm font-medium rounded-md"
+                >
+                  Discover <i class="fa-solid fa-arrow-up-right-from-square text-xs"></i>
+                </button>
+              </div>
+            </div>
+          </article>
+        </div>
+      </section>
+
+      <section
+        class="bg-[#141414] py-20 px-6 lg:px-16 relative overflow-hidden text-white cta-strip"
+      >
+        <div
+          class="max-w-[1400px] mx-auto flex flex-col lg:flex-row items-center justify-between gap-10 relative z-10"
+        >
+          <div class="max-w-xl">
+            <h2 class="text-5xl lg:text-[65px] font-normal leading-tight tracking-tight mb-10">
+              Create rare moments with your family now
+            </h2>
+            <div class="flex flex-wrap gap-4">
+              <button
+                class="secondary-btn bg-white text-gray-900 font-medium px-7 py-3.5 rounded-md text-sm"
+              >
+                Schedule a tour
+              </button>
+              <a
+                href="./properties.html"
+                class="primary-btn bg-[#383838] text-white font-medium px-7 py-3.5 rounded-md text-sm"
+                >View clusters</a
+              >
+            </div>
+          </div>
+
+          <div
+            class="relative w-full max-w-[500px] h-[300px] lg:h-[400px] flex items-center justify-center image-zoom rounded-2xl overflow-hidden"
+          >
+            <img src="./assets/footer.png" alt="Serenia homes" class="w-full h-full object-cover" />
+          </div>
+        </div>
+      </section>
+    </main>
+
+    <footer class="bg-[#212121] text-gray-400 pt-16 pb-20 px-6 lg:px-16 border-t border-white/5">
+      <div class="max-w-[1400px] mx-auto">
+        <div class="flex flex-col lg:flex-row justify-between items-start gap-10 mb-20">
+          <div>
+            <div class="flex items-center gap-2 font-bold text-2xl text-white mb-12">
+              <img src="./assets/gglolgo.png" alt="Serenia" class="h-10 w-auto" />
+            </div>
+            <div class="space-y-2 text-sm text-gray-300">
+              <p>sereniasupport@serenia.com</p>
+              <p>(+1) 345 - 3345 - 005</p>
+            </div>
+          </div>
+
+          <div class="max-w-md w-full">
+            <h3 class="text-2xl font-normal text-white mb-6 leading-snug">
+              Subscribe to get the latest information from us
+            </h3>
+            <form class="flex gap-3">
+              <input
+                type="email"
+                placeholder="Enter your email"
+                class="bg-[#181818] border border-white/10 text-sm px-4 py-3.5 rounded-md w-full focus:outline-none focus:border-white/30 text-white placeholder-gray-500"
+              />
+              <button
+                type="submit"
+                class="secondary-btn bg-white text-gray-900 font-medium px-6 py-3.5 rounded-md text-sm whitespace-nowrap"
+              >
+                Subscribe
+              </button>
+            </form>
+          </div>
+        </div>
+
+        <div class="grid grid-cols-2 md:grid-cols-4 gap-8 pt-12 border-t border-white/10 text-sm">
+          <div>
+            <h4 class="text-xs uppercase font-semibold text-gray-500 tracking-wider mb-6">
+              Company
+            </h4>
+            <ul class="space-y-4 text-gray-300">
+              <li><a href="./home.html" class="hover:text-white transition">About us</a></li>
+              <li><a href="./contactus.html" class="hover:text-white transition">Careers</a></li>
+              <li>
+                <a href="./blogs.html" class="hover:text-white transition">Press &amp; Media</a>
+              </li>
+              <li>
+                <a href="./contactus.html" class="hover:text-white transition">Opportunity</a>
+              </li>
+            </ul>
+          </div>
+          <div>
+            <h4 class="text-xs uppercase font-semibold text-gray-500 tracking-wider mb-6">
+              Services
+            </h4>
+            <ul class="space-y-4 text-gray-300">
+              <li>
+                <a href="./properties.html" class="hover:text-white transition"
+                  >Property listings</a
+                >
+              </li>
+              <li>
+                <a href="./calendar.html" class="hover:text-white transition">Progress tracking</a>
+              </li>
+              <li>
+                <a href="./gallery.html" class="hover:text-white transition">Virtual tours</a>
+              </li>
+              <li>
+                <a href="./contactus.html" class="hover:text-white transition">Consultation</a>
+              </li>
+            </ul>
+          </div>
+          <div>
+            <h4 class="text-xs uppercase font-semibold text-gray-500 tracking-wider mb-6">
+              Resources
+            </h4>
+            <ul class="space-y-4 text-gray-300">
+              <li>
+                <a href="./blogs.html" class="hover:text-white transition">Blog &amp; articles</a>
+              </li>
+              <li><a href="./contactus.html" class="hover:text-white transition">FAQs</a></li>
+              <li>
+                <a href="./blogs.html" class="hover:text-white transition">Guide &amp; Tutorials</a>
+              </li>
+              <li>
+                <a href="./contactus.html" class="hover:text-white transition">Help Center</a>
+              </li>
+            </ul>
+          </div>
+          <div>
+            <h4 class="text-xs uppercase font-semibold text-gray-500 tracking-wider mb-6">Legal</h4>
+            <ul class="space-y-4 text-gray-300">
+              <li><a href="#" class="hover:text-white transition">Privacy Policy</a></li>
+              <li><a href="#" class="hover:text-white transition">Terms &amp; Conditions</a></li>
+              <li><a href="#" class="hover:text-white transition">Cookie policy</a></li>
+              <li><a href="#" class="hover:text-white transition">Disclaimer</a></li>
+            </ul>
+          </div>
+        </div>
+      </div>
+    </footer>
+  </body>
+</html>

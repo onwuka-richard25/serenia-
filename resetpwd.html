@@ -1,0 +1,91 @@
+<!doctype html>
+<html lang="en">
+  <head>
+    <meta charset="UTF-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <title>Forgot Password - Serenia</title>
+    <link
+      rel="stylesheet"
+      href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.5.1/css/all.min.css"
+    />
+    <link rel="stylesheet" href="../src/output.css" />
+  </head>
+  <body class="bg-stone-200">
+    <div>
+      <img src="./assets/Logo (1).png" alt="logo" class="h-6 mx-auto mt-10" />
+    </div>
+
+    <main class="bg-white h-130 w-100 mx-auto mt-20">
+      <h1 class="p-5 pb-3 font-semibold text-[20px]">Reset your Password?</h1>
+
+      <div class="text-[14px] p-5 pt-0">
+        <span class="text-[#5A5B5B]">Enter a new password for your Serenia Admin account.</span>
+      </div>
+
+      <div class="p-5 text-[14px] font-medium pt-0">
+        <label for="password">Password</label>
+        <div class="relative">
+          <input
+            id="password"
+            type="password"
+            class="mt-2 focus:outline-none focus:border-[#56593B] focus:ring-2 focus:ring-[#56593B]/20 focus:rounded-md relative ml-1 p-2 h-10 w-90 shadow-box"
+            placeholder="Enter your password"
+            required
+          />
+          <i
+            class="fa-regular absolute right-0 top-2 h-10 w-10 hover:ring-2 items-center hover:rounded-md hover:ring-[#56593B]/20 text-center p-3 fa-eye"
+            aria-hidden="true"
+          ></i>
+        </div>
+      </div>
+
+      <div class="space-y-3 mx-5 mb-10 text-sm w-90 h-30 bg-[#fafafa] text-gray-700 p-3">
+        <p class="font-medium text-gray-900">Make sure your password is:</p>
+        <ul class="flex flex-wrap gap-y-3">
+          <li class="w-1/2 flex items-center gap-2">
+            <i class="fa-solid fa-circle-check text-green-600 text-base" aria-hidden="true"></i>
+            <span>At least contain 1 symbol</span>
+          </li>
+          <li class="w-1/2 flex items-center gap-2">
+            <i class="fa-solid fa-circle-check text-green-600 text-base" aria-hidden="true"></i>
+            <span>Minimum 8 characters</span>
+          </li>
+          <li class="w-1/2 flex items-center gap-2">
+            <i class="fa-solid fa-circle-check text-green-600 text-base" aria-hidden="true"></i>
+            <span>At least contain 1 number</span>
+          </li>
+          <li class="w-1/2 flex items-center gap-2">
+            <i class="fa-solid fa-circle-xmark text-red-500 text-base" aria-hidden="true"></i>
+            <span>Using 1 capital letter</span>
+          </li>
+        </ul>
+      </div>
+
+      <div class="p-5 text-[14px] font-medium pt-0">
+        <label for="confirm-password">Confirm Password</label>
+        <div class="relative">
+          <input
+            id="confirm-password"
+            type="password"
+            class="mt-2 focus:outline-none focus:border-[#56593B] focus:ring-2 focus:ring-[#56593B]/20 focus:rounded-md relative ml-1 p-2 h-10 w-90 shadow-box"
+            placeholder="Confirm your password"
+            required
+          />
+          <i
+            class="fa-regular absolute right-0 top-2 h-10 w-10 hover:ring-2 items-center hover:rounded-md hover:ring-[#56593B]/20 text-center p-3 fa-eye"
+            aria-hidden="true"
+          ></i>
+        </div>
+      </div>
+
+      <hr class="border-black/20 mb-5" />
+      <button
+        type="button"
+        onclick="window.location.href = './pwdupdated.html'"
+        class="primary-btn text-white h-10 w-90 ml-5"
+      >
+        Update Password
+      </button>
+    </main>
+  </body>
+</html>

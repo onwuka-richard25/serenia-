@@ -1,0 +1,51 @@
+<!doctype html>
+<html lang="en">
+  <head>
+    <meta charset="UTF-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <link
+      rel="stylesheet"
+      href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.5.1/css/all.min.css"
+    />
+    <link rel="stylesheet" href="../src/output.css" />
+    <title>Page not found - Serenia</title>
+  </head>
+  <body class="h-dvh">
+    <nav
+      class="h-24 w-full px-16 items-center flex justify-between border-b border-gray-100 text-base"
+    >
+      <div class="flex items-center gap-2 font-bold text-2xl text-gray-900">
+        <a href="./home.html" aria-label="Serenia home"
+          ><img src="./assets/Logo (1).png" alt="logo"
+        /></a>
+      </div>
+      <div class="text-[25px]">
+        <h1>PAGE NOT FOUND</h1>
+      </div>
+    </nav>
+    <div class="h-150">
+      <img src="./assets/my404.jpg" class="mx-auto h-150" alt="Page not found illustration" />
+    </div>
+    <footer>
+      <div class="w-full flex justify-between">
+        <span class="text-[40px] w-1/2 font-medium p-6 pl-10"
+          >Oops, it seems <br />
+          you've gotten lost.</span
+        >
+        <div class="p-4 flex bg-[#f7f7f7] w-1/2 flex-col">
+          <span
+            >The page you are looking for is not available or has been <br />
+            moved. Don't worry, let's go back to the previous page.</span
+          >
+          <button
+            type="button"
+            onclick="history.back()"
+            class="bg-[#e3dede] h-10 w-35 mt-5 hover:brightness-90 duration-200"
+          >
+            Back to previous
+          </button>
+        </div>
+      </div>
+    </footer>
+  </body>
+</html>
