@@ -12,16 +12,16 @@
   </head>
   <body>
     <nav
-      class="h-24 w-full px-16 items-center flex justify-between border-b border-gray-100 text-base"
+      class="site-nav h-20 w-full px-16 items-center flex justify-between border-b border-gray-100 text-sm"
     >
       <div class="flex items-center gap-2 font-bold text-2xl text-gray-900">
         <a href="./home.html" aria-label="Serenia home">
-          <img src="./assets/Logo (1).png" alt="logo" class="" />
+          <img src="./assets/Logo (1).png" alt="logo" />
         </a>
       </div>
 
       <div>
-        <ul class="flex gap-12 items-center text-[20px] text-gray-600 font-medium">
+        <ul class="flex gap-8 items-center text-sm text-gray-600 font-medium">
           <li class="nav-link hover:text-gray-900 cursor-pointer">
             <a href="./properties.html" class="inline-flex items-center gap-1"
               >Properties <i class="fa-solid text-xs fa-caret-down ml-1 dropdown-icon"></i
@@ -42,14 +42,14 @@
       </div>
 
       <div>
-        <ul class="flex gap-6 items-center">
+        <ul class="flex gap-4 items-center text-sm">
           <li
-            class="nav-link px-5 py-3 hover:text-gray-900 font-medium cursor-pointer text-gray-600"
+            class="nav-link px-4 py-3 hover:text-gray-900 font-medium cursor-pointer text-gray-600"
           >
             <a href="./contactus.html">Contact us</a>
           </li>
           <li
-            class="nav-button bg-[#f3f3f3] hover:bg-gray-200 font-medium px-6 py-3 text-gray-800 cursor-pointer rounded-md"
+            class="nav-button bg-stone hover:bg-gray-200 font-medium px-4 py-3 text-gray-800 cursor-pointer rounded-md"
           >
             <a href="./contactus.html">Request tour</a>
           </li>
@@ -58,11 +58,10 @@
     </nav>
 
     <main>
-      <div>
-      <section class="flex h-120">
+      <section class="home-hero flex h-120">
         <div class="w-1/2">
           <div
-            class="floating-badge h-11.25 text-[#926100] p-3 bg-[#FFF8EB] w-62.5 flex mt-6 ml-7"
+            class="floating-badge h-11.25 text-gold p-3 bg-gold-cream w-62.5 flex mt-6 ml-7"
           >
             <img
               src="./assets/gold-award-laurel-wreath-accessories-decoration-chandelier 1.svg"
@@ -72,14 +71,14 @@
             <h1 class="font-medium font-body">Winner of the IPA 2025</h1>
           </div>
 
-          <div class="ml-10 mt-3 font-medium text-gray-800 text-[70px] leading-tight">
+          <div class="home-hero-title ml-10 mt-3 font-medium text-gray-800 text-[70px] leading-tight">
             <span class="block">Timeless</span>
             <span class="block">living modern</span>
             <span class="block">touch.</span>
           </div>
 
           <div
-            class="ml-10 mt-12 text-[18px] text-gray-700 font-normal leading-tight tracking-tight hero-fade delay-2"
+            class="home-hero-description ml-10 mt-12 text-[18px] text-gray-700 font-normal leading-tight tracking-tight hero-fade delay-2"
           >
             Explore thoughtfully designed residences that combine
             <br />
@@ -87,8 +86,8 @@
           </div>
         </div>
 
-        <div class="w-1/2 h-full bg-[#f5f5f5] flex">
-          <div class="w-full bg-[#f5f5f5] p-6">
+        <div class="home-hero-panel w-1/2 h-full bg-sand flex">
+          <div class="w-full bg-sand p-6">
             <form class="h-100 shadow-box bg-white mt-4 p-6">
               <div class="flex items-center gap-3 pb-5 mb-6 border-b border-gray-300">
                 <i class="fa-solid fa-house"></i>
@@ -97,13 +96,13 @@
 
               <div class="grid grid-cols-1 sm:grid-cols-3 gap-4 mb-5">
                 <div class="flex flex-col">
-                  <label for="cluster" class="text-lg font-medium text-gray-900 mb-2"
+                  <label for="cluster" class="property-search-label text-lg"
                     >Cluster</label
                   >
                   <div class="relative dropdown-wrap">
                     <select
                       id="cluster"
-                      class="w-full h-15 pl-3 pr-8 py-2.5 bg-white border border-gray-300 rounded-none text-base text-gray-900 appearance-none focus:outline-none focus:border-[#53583c] cursor-pointer"
+                      class="property-search-select"
                     >
                       <option selected>Ardenia park</option>
                       <option>Aruna</option>
@@ -112,7 +111,7 @@
                         <option>Others</option>
                     </select>
                     <div
-                      class="pointer-events-none absolute inset-y-0 right-0 flex items-center px-3 text-gray-900"
+                      class="property-select-arrow"
                     >
                       <i class="fa-solid fa-chevron-down dropdown-icon"></i>
                     </div>
@@ -120,20 +119,20 @@
                 </div>
 
                 <div class="flex flex-col control-field">
-                  <label for="price" class="text-xl font-medium text-gray-900 mb-2"
+                  <label for="price" class="property-search-label text-xl"
                     >Price range</label
                   >
                   <div class="relative dropdown-wrap">
                     <select
                       id="price"
-                      class="w-full pl-3 pr-8 py-2.5 h-15 bg-white border border-gray-300 rounded-none text-base text-gray-900 appearance-none focus:outline-none focus:border-[#53583c] truncate cursor-pointer"
+                      class="property-search-select truncate"
                     >
                       <option selected>$85.000 - $120...</option>
                       <option>$120.000 - $150.000</option>
                       <option>$150.000+</option>
                     </select>
                     <div
-                      class="pointer-events-none absolute inset-y-0 right-0 flex items-center px-3 text-gray-900"
+                      class="property-select-arrow"
                     >
                       <i class="fa-solid fa-chevron-down dropdown-icon"></i>
                     </div>
@@ -141,20 +140,20 @@
                 </div>
 
                 <div class="flex flex-col">
-                  <label for="bedroom" class="text-xl font-medium text-gray-900 mb-2"
+                  <label for="bedroom" class="property-search-label text-xl"
                     >Bedroom</label
                   >
                   <div class="relative dropdown-wrap">
                     <select
                       id="bedroom"
-                      class="w-full pl-3 pr-8 py-2.5 bg-white border h-15 border-gray-300 rounded-none text-base text-gray-900 appearance-none focus:outline-none focus:border-[#53583c] cursor-pointer"
+                      class="property-search-select"
                     >
                       <option>1</option>
                       <option>2</option>
                       <option selected>3</option>
                       <option>4+</option>
                     </select>
-                    <div class="absolute inset-y-0 right-0 flex items-center px-3 text-gray-900">
+                    <div class="property-select-arrow">
                       <i class="fa-solid fa-chevron-down dropdown-icon"></i>
                     </div>
                   </div>
@@ -174,14 +173,14 @@
                       type="text"
                       id="address"
                       placeholder="Enter address"
-                      class="w-full pl-9 pr-3 h-15 py-2.5 bg-white border text-xl border-gray-300 rounded-none text-gray-900 placeholder-gray-400 focus:outline-none focus:border-[#53583c]"
+                      class="w-full pl-9 pr-3 h-15 py-2.5 bg-white border text-xl border-gray-300 rounded-none text-gray-900 placeholder-gray-400 focus:outline-none focus:border-olive"
                     />
                   </div>
                 </div>
 
                 <button
                   type="submit"
-                  class="primary-button w-full bg-[#53583c] hover:bg-[#434730] text-white font-medium py-2.5 px-4 h-15 rounded-none text-base transition-colors duration-200"
+                  class="primary-button w-full bg-olive hover:bg-olive-dark text-white font-medium py-2.5 px-4 h-15 rounded-none text-base transition-colors duration-200"
                 >
                   Show the result
                 </button>
@@ -199,14 +198,14 @@
         />
       </section>
 
-      <section class="p-2 h-260">
+      <section class="home-feature-section p-2 h-260">
         <h1 class="text-center font-medium text-[50px] text-stone-900 p-2 my-10">
           Discover signature <br />
           communities
         </h1>
 
         <article
-          class="property-card w-full max-w-350 shadow-article p-3 mb-5 mx-auto bg-white border border-gray-100 flex min-h-150"
+          class="home-property-card property-card w-full max-w-350 shadow-article p-3 mb-5 mx-auto bg-white border border-gray-100 flex min-h-150"
         >
           <div class="w-1/2 relative min-h-137.5 overflow-hidden rounded-md">
             <img
@@ -219,7 +218,7 @@
           <div class="w-1/2 p-14 flex flex-col justify-between">
             <div>
               <div
-                class="feature-badge inline-flex items-center gap-2.5 px-4 py-2 bg-[#fff8ed] text-[#b37200] text-sm font-medium rounded-md mb-6"
+                class="feature-badge inline-flex items-center gap-2.5 px-4 py-2 bg-cream text-gold-soft text-sm font-medium rounded-md mb-6"
               >
                 <i class="fa-solid fa-hand-holding-heart text-xs"></i>
                 The modern comfort
@@ -253,7 +252,7 @@
                 <span class="text-3xl font-bold text-gray-900">$85,000</span>
               </div>
               <button
-                class="nav-button inline-flex items-center gap-2.5 px-7 py-3.5 bg-[#f3f3f3] hover:bg-gray-200 text-gray-900 text-sm font-medium rounded-md"
+                class="nav-button inline-flex items-center gap-2.5 px-7 py-3.5 bg-stone hover:bg-gray-200 text-gray-900 text-sm font-medium rounded-md"
               >
                 Discover <i class="fa-solid fa-arrow-up-right-from-square text-xs"></i>
               </button>
@@ -275,7 +274,7 @@
         </div>
       </section>
 
-      <section class="bg-[#141414] m-5 mb-0 min-h-100">
+      <section class="home-vision bg-ink m-5 mb-0 min-h-100">
         <div class="flex flex-row justify-between gap-8 p-12 text-white">
           <h1 class="text-[48px] font-medium leading-[120%] tracking-tight">
             Shaping the <br />
@@ -314,127 +313,101 @@
         <img src="./assets/correctvector.png" alt="Weird house" class="w-full block" />
       </div>
       <section>
-          <div>
-            <h1 class="text-[45px] text-center my-20 font-medium">Facilities & Amenities</h1>
-          </div>
-          <div class="w-full flex h-220">
+        <h1 class="text-[45px] text-center my-20 font-medium">Facilities & Amenities</h1>
+        <div class="home-facilities w-full flex h-220">
             <div class="w-1/2 h-full">
               <img src="./assets/Image (1).png" alt="" class="object-center h-full w-full" />
             </div>
             <div class="w-1/2 h-full">
               <div class="divide-y divide-gray-300 flex h-full flex-col">
-                  <!-- Item1--->
-                     <a
-                    href=""
-                    class="flex-1 py-5 px-8 flex items-center justify-center hover:text-gray-900 text-gray-400 text-xl text-center hover:font-semibold hover:text-4xl transition-all duration-300 hover:bg-gray-50/80"
-                  >
-                    <span class="inline-flex items-baseline gap-2">
-                      <span
-                        class="font-normal"
-                        >Sports Facilities</span
-                      >
-                      <span class="text-xs font-medium text-gray-300">01</span>
-                    </span>
-                  </a>
+                <a
+                  href=""
+                  class="flex-1 py-5 px-8 flex items-center justify-center hover:text-gray-900 text-gray-400 text-xl text-center hover:font-semibold hover:text-4xl transition-all duration-300 hover:bg-gray-50/80"
+                >
+                  <span class="inline-flex items-baseline gap-2">
+                    <span class="font-normal">Sports Facilities</span>
+                    <span class="text-xs font-medium text-gray-300">01</span>
+                  </span>
+                </a>
 
-                  <!-- Item2 -->
-                        <a
-                    href=""
-                    class="flex-1 py-5 px-8 flex items-center justify-center hover:text-gray-900 text-gray-400 text-2xl text-center hover:font-semibold hover:text-4xl transition-all duration-300 hover:bg-gray-50/80"
-                  >
-                    <span class="inline-flex items-baseline gap-2">
-                      <span
-                        class="font-normal transition-colors"
-                        >The Lifestyle Center</span
-                      >
-                      <span class="text-xs font-medium text-gray-300">02</span>
-                    </span>
-                  </a>
+                <a
+                  href=""
+                  class="flex-1 py-5 px-8 flex items-center justify-center hover:text-gray-900 text-gray-400 text-2xl text-center hover:font-semibold hover:text-4xl transition-all duration-300 hover:bg-gray-50/80"
+                >
+                  <span class="inline-flex items-baseline gap-2">
+                    <span class="font-normal transition-colors">The Lifestyle Center</span>
+                    <span class="text-xs font-medium text-gray-300">02</span>
+                  </span>
+                </a>
 
-                  <!-- Item3 -->
-                      <a
-                    href=""
-                    class="flex-1 py-5 px-8 flex items-center justify-center hover:text-gray-900 text-gray-400 text-3xl text-center hover:font-semibold hover:text-4xl transition-all duration-300 hover:bg-gray-50/80"
-                  >
-                    <span class="inline-flex items-baseline gap-2">
-                      <span
-                        class="font-normal"
-                        >Children’s Playground</span
-                      >
-                      <span class="text-xs font-medium text-gray-400">03</span>
-                    </span>
-                  </a>
+                <a
+                  href=""
+                  class="flex-1 py-5 px-8 flex items-center justify-center hover:text-gray-900 text-gray-400 text-3xl text-center hover:font-semibold hover:text-4xl transition-all duration-300 hover:bg-gray-50/80"
+                >
+                  <span class="inline-flex items-baseline gap-2">
+                    <span class="font-normal">Children’s Playground</span>
+                    <span class="text-xs font-medium text-gray-400">03</span>
+                  </span>
+                </a>
 
-                  <!--Item4-->
-                  <a
-                    href=""
-                    class="flex-1 py-7 px-8 flex items-center justify-center hover:text-gray-900 text-4xl text-center hover:font-semibold hover:text-5xl transition-all duration-400 hover:bg-gray-50/80"
-                  >
-                    <span class="inline-flex items-baseline gap-2">
-                      <span class=" text-gray-700 tracking-tight"
-                        >Golf central playground</span
-                      >
-                      <span class="text-sm font-medium text-gray-400">04</span>
-                    </span>
-                  </a>
+                <a
+                  href=""
+                  class="flex-1 py-7 px-8 flex items-center justify-center hover:text-gray-900 text-4xl text-center hover:font-semibold hover:text-5xl transition-all duration-400 hover:bg-gray-50/80"
+                >
+                  <span class="inline-flex items-baseline gap-2">
+                    <span class="text-gray-700 tracking-tight">Golf central playground</span>
+                    <span class="text-sm font-medium text-gray-400">04</span>
+                  </span>
+                </a>
 
-                  <!-- Item5 -->
-                   <a
-                    href=""
-                    class="flex-1 py-5 px-8 flex items-center justify-center text-gray-500 hover:text-gray-900 text-3xl text-center hover:font-semibold hover:text-4xl transition-all duration-300 hover:bg-gray-50/80"
-                  >
-                    <span class="inline-flex items-baseline gap-2">
-                      <span
-                        class=" font-normal"
-                        >Retail & Lifestyle Center</span
-                      >
-                      <span class="text-xs font-medium">05</span>
-                    </span>
-                  </a>
+                <a
+                  href=""
+                  class="flex-1 py-5 px-8 flex items-center justify-center text-gray-500 hover:text-gray-900 text-3xl text-center hover:font-semibold hover:text-4xl transition-all duration-300 hover:bg-gray-50/80"
+                >
+                  <span class="inline-flex items-baseline gap-2">
+                    <span class="font-normal">Retail & Lifestyle Center</span>
+                    <span class="text-xs font-medium">05</span>
+                  </span>
+                </a>
 
-                 <a
-                    href=""
-                    class="flex-1 py-5 px-8 flex items-center justify-center hover:text-gray-900 text-gray-400 text-2xl text-center hover:font-semibold hover:text-4xl transition-all duration-300 hover:bg-gray-50/80"
-                  >
-                    <span class="inline-flex items-baseline gap-2">
-                      <span
-                        class="font-normal"
-                        >Cluster clubhouse</span
-                      >
-                      <span class="text-xs font-medium text-gray-300">06</span>
-                    </span>
-                  </a>
-                 <a
-                    href=""
-                    class="flex-1 py-8 px-8 flex items-center justify-center text-gray-300 hover:text-gray-900 text-xl text-center hover:font-semibold hover:text-4xl transition-all duration-300 hover:bg-gray-50/80"
-                  >
-                    <span class="inline-flex items-baseline gap-2">
-                      <span
-                        class="font-normal "
-                        >Jogging track</span
-                      >
-                      <span class="text-xs font-medium text-gray-300">07</span>
-                    </span>
-                  </a>
+                <a
+                  href=""
+                  class="flex-1 py-5 px-8 flex items-center justify-center hover:text-gray-900 text-gray-400 text-2xl text-center hover:font-semibold hover:text-4xl transition-all duration-300 hover:bg-gray-50/80"
+                >
+                  <span class="inline-flex items-baseline gap-2">
+                    <span class="font-normal">Cluster clubhouse</span>
+                    <span class="text-xs font-medium text-gray-300">06</span>
+                  </span>
+                </a>
+
+                <a
+                  href=""
+                  class="flex-1 py-8 px-8 flex items-center justify-center text-gray-300 hover:text-gray-900 text-xl text-center hover:font-semibold hover:text-4xl transition-all duration-300 hover:bg-gray-50/80"
+                >
+                  <span class="inline-flex items-baseline gap-2">
+                    <span class="font-normal">Jogging track</span>
+                    <span class="text-xs font-medium text-gray-300">07</span>
+                  </span>
+                </a>
               </div>
             </div>
           </div>
         </div>
       </section>
-      <section class="flex w-full p-15 pt-15">
+      <section class="home-awards flex w-full p-15 pt-15">
     <div class="w-1/2 shadow-boxx min-h-230 pt-70">
       <div class="lg:col-span-5 pt-8 pb-12 px-6 sm:px-10 lg:pl-12 lg:pr-14 flex flex-col justify-start">
-          <h1 class="text-6xl font-medium text-[#111111] leading-[1.12] tracking-[-0.02em] mb-7">
+          <h1 class="text-6xl font-medium text-ink-deep leading-[1.12] tracking-[-0.02em] mb-7">
           Our awards &amp;<br />
           global<br />
           recognition
         </h1>
 
-        <p class="text-xl text-[#555555] leading-tight mb-10">
+        <p class="text-xl text-text-soft leading-tight mb-10">
           Our achievements are recognized not only locally but also on the <br> international stage. From prestigious industry awards to global <br> certifications, each recognition reflects our commitment to excellence, <br> innovation, and quality that meets world-class standards.
         </p>
 
-        <h2 class="text-xl font-bold text-[#111111] mb-5 tracking-tight">
+        <h2 class="text-xl font-bold text-ink-deep mb-5 tracking-tight">
           More than 20 years, we known as
         </h2>
         <ul class="space-y-3.5">
@@ -458,79 +431,216 @@
       </div>
     </div>
     <div class="w-1/2 grid grid-cols-2">
-      <div class="p-4 sm:p-6 flex items-center justify-center hover:bg-gray-200 transition-colors duration-300 cursor-pointer border-b border-r-0 sm:border-r border-gray-200">
-          <div class="text-center text-[#999999]">
+        <div class="award-logo-cell award-logo-cell-bordered">
+          <div class="award-logo-mark">
            <img src="./assets/logo-22.png" alt="">
           </div>
         </div>
      
-  <div class="p-4 sm:p-6 flex items-center justify-center hover:bg-gray-200 transition-colors duration-300 cursor-pointer border-b border-r-0 border-gray-200">
-          <div class="text-center text-[#999999]">
+    <div class="award-logo-cell">
+      <div class="award-logo-mark">
            <img src="./assets/logo-24.png" alt="">
           </div>
         </div>
- <div class="p-4 sm:p-6 flex items-center justify-center hover:bg-gray-200 transition-colors duration-300 cursor-pointer border-b border-r-0 sm:border-r border-gray-200">
-          <div class="text-center text-[#999999]">
+ <div class="award-logo-cell award-logo-cell-bordered">
+          <div class="award-logo-mark">
            <img src="./assets/logo-19.png" alt="">
           </div>
         </div>
 
-        <div class="p-4 sm:p-6 flex items-center justify-center hover:bg-gray-200 transition-colors duration-300 cursor-pointer border-b border-r-0 border-gray-200">
-          <div class="text-center text-[#999999]">
+        <div class="award-logo-cell">
+          <div class="award-logo-mark">
            <img src="./assets/logo-21.png" alt="">
           </div>
         </div>
 
     
 
-        <div class="p-4 sm:p-6 flex items-center justify-center hover:bg-gray-200 transition-colors duration-300 cursor-pointer border-r-0 sm:border-r border-gray-200">
-          <div class="text-center text-[#999999]">
+        <div class="award-logo-cell award-logo-cell-bordered award-logo-cell-last">
+          <div class="award-logo-mark">
            <img src="./assets/Logo.png" alt="">
           </div>
         </div>
-         <div class="p-4 sm:p-6 flex items-center justify-center hover:bg-gray-200 transition-colors duration-300 cursor-pointer border-r-0 border-gray-200">
-          <div class="text-center text-[#999999]">
+         <div class="award-logo-cell award-logo-cell-last">
+          <div class="award-logo-mark">
            <img src="./assets/logo-18.png" alt="">
           </div>
         </div>
     </div>
   </section>
-    </div>
- <section class="w-full text-center text-white p-5 bg-[#141414]">
+  <section class="w-full text-center text-white p-5 bg-ink">
   <h1 class="text-4xl p-7">Our Gallery</h1>
   <p>Discover the beauty of Serenia in our gallery, <br> featuring both its exterior and interior.</p>
-  <div class="bg-[#141414] p-4 grid grid-cols-3 gap-y-20 gap-x-5 items-center mt-6">
-    <div class="bg-[#242424] h-125 text-2xl w-full"><p class="p-5">Bathroom</p><img src="./assets/Rectangle 109 (1).png" alt="" class="w-full object-cover"></div>
-    <div class="bg-[#242424] h-125 text-2xl w-full"><p class="p-5">Kitchen & Dining</p><img src="./assets/Rectangle 109 (2).png" alt="" class="w-full object-cover"></div>
-    <div class="bg-[#242424] h-125 text-2xl w-full"><p class="p-5">Family Room</p><img src="./assets/Rectangle 109 (3).png" alt="" class="w-full object-cover"></div>
-    <div class="bg-[#242424] h-125 text-2xl w-full"><p class="p-5">Rooftop</p><img src="./assets/Rectangle 109 (4).png" alt="" class="w-full object-cover"></div>
-    <div class="bg-[#242424] h-125 text-2xl w-full"><p class="p-5">Workspace</p><img src="./assets/Rectangle 109 (5).png" alt="" class="w-full object-cover"></div>
-    <div class="bg-[#242424] h-125 text-2xl w-full"><p class="p-5">Bedroom</p><img src="./assets/Rectangle 109 (6).png" alt="" class="w-full object-cover"></div>
-    <div class="bg-[#242424] h-125 text-2xl w-full"><p class="p-5">Stairs</p><img src="./assets/Rectangle 109 (7).png" alt="" class="w-full object-cover"></div>
-    <div class="bg-[#242424] h-125 text-2xl w-full"><p class="p-5">Backyard</p><img src="./assets/Rectangle 109 (8).png" alt="" class="w-full object-cover"></div>
-    <div class="bg-[#242424] h-125 text-2xl w-full"><p class="p-5">Interiors</p><img src="./assets/Rectangle 109 (9).png" alt="" class="w-full object-cover"></div>
+  <div class="home-gallery-grid bg-ink p-4 grid grid-cols-3 gap-y-20 gap-x-5 items-center mt-6">
+    <div class="gallery-tile"><p class="gallery-tile-title">Bathroom</p><img src="./assets/Rectangle 109 (1).png" alt="" class="gallery-tile-image"></div>
+    <div class="gallery-tile"><p class="gallery-tile-title">Kitchen & Dining</p><img src="./assets/Rectangle 109 (2).png" alt="" class="gallery-tile-image"></div>
+    <div class="gallery-tile"><p class="gallery-tile-title">Family Room</p><img src="./assets/Rectangle 109 (3).png" alt="" class="gallery-tile-image"></div>
+    <div class="gallery-tile"><p class="gallery-tile-title">Rooftop</p><img src="./assets/Rectangle 109 (4).png" alt="" class="gallery-tile-image"></div>
+    <div class="gallery-tile"><p class="gallery-tile-title">Workspace</p><img src="./assets/Rectangle 109 (5).png" alt="" class="gallery-tile-image"></div>
+    <div class="gallery-tile"><p class="gallery-tile-title">Bedroom</p><img src="./assets/Rectangle 109 (6).png" alt="" class="gallery-tile-image"></div>
+    <div class="gallery-tile"><p class="gallery-tile-title">Stairs</p><img src="./assets/Rectangle 109 (7).png" alt="" class="gallery-tile-image"></div>
+    <div class="gallery-tile"><p class="gallery-tile-title">Backyard</p><img src="./assets/Rectangle 109 (8).png" alt="" class="gallery-tile-image"></div>
+    <div class="gallery-tile"><p class="gallery-tile-title">Interiors</p><img src="./assets/Rectangle 109 (9).png" alt="" class="gallery-tile-image"></div>
   </div>
-  <div class="h-60 p-15 pr-1 text-center w-full bg-[#141414]">
+  <div class="h-60 p-15 pr-1 text-center w-full bg-ink">
     <p>And there are many other gallery <br> categories and photos, discover <br> now.</p>
     <button class="h-10 w-50 mt-9 pl-6 flex mx-auto gap-3 items-center bg-[#434343] hover:brightness-200 transition-colors duration-300">
       View all gallery's <i class="fa-solid fa-arrow-up-right-from-square"></i>
     </button>
   </div>
+<!---
+
+-->
+  
 </section>
-<section class="h-326 p-16 bg-[#fafafa]">
+<section class="home-faq-section h-326 p-16 bg-paper">
    <div>
     <h1 class="text-center text-5xl leading-[120%] tracking-[0%] font-medium p-10">Frequently <br> asked <br>question</h1>
    </div>
-   <div class="mx-auto h-247 bg-white">
+   <div class="mx-auto h-247">
+  <div class=" mx-auto max-w-4xl flex flex-col gap-3">
+    
+    <div class="faq-item faq-card">
+      <button class="faq-header faq-trigger" aria-expanded="true">
+        <span class="faq-title faq-question">
+          What types of properties does Serenia offer?
+        </span>
+        <span class="faq-icon faq-toggle">
+          &minus;
+        </span>
+      </button>
+      <div class="faq-content faq-panel faq-panel-open">
+        <div class="faq-answer">
+          <p class="mb-3">We provide a wide range of properties, including:</p>
+          <ul class="faq-answer-list">
+            <li><strong class="faq-answer-emphasis">Residential Homes</strong> &ndash; exclusive housing with modern design.</li>
+            <li><strong class="faq-answer-emphasis">Apartments</strong> &ndash; vertical living with complete facilities.</li>
+            <li><strong class="faq-answer-emphasis">Commercial Spaces</strong> &ndash; shop houses and business areas in prime locations.</li>
+            <li><strong class="faq-answer-emphasis">Integrated Townships</strong> &ndash; complete with malls, green parks, schools, and lifestyle facilities.</li>
+          </ul>
+        </div>
+      </div>
+    </div>
 
-   </div>
+    
+    <div class="faq-item faq-card">
+      <button class="faq-header faq-trigger" aria-expanded="false">
+        <span class="faq-title faq-question">
+          Where are Serenia's projects located?
+        </span>
+        <span class="faq-icon faq-toggle">
+          &#43;
+        </span>
+      </button>
+      <div class="faq-content faq-panel faq-panel-closed">
+        <div class="faq-answer">
+          Serenia's projects are strategically located in prime metropolitan and high-growth areas across the nation, ensuring accessibility to key transportation hubs, business centers, and essential amenities.
+        </div>
+      </div>
+    </div>
+
+    <div class="faq-item faq-card">
+      <button class="faq-header faq-trigger" aria-expanded="false">
+        <span class="faq-title faq-question">
+          What are the benefits of owning a Serenia property?
+        </span>
+        <span class="faq-icon faq-toggle">
+          &#43;
+        </span>
+      </button>
+      <div class="faq-content faq-panel faq-panel-closed">
+        <div class="faq-answer">
+          Owning a Serenia property offers long-term capital appreciation, high-quality architectural design, sustainable eco-friendly infrastructure, 24/7 security, and access to exclusive community facilities.
+        </div>
+      </div>
+    </div>
+    <div class="faq-item faq-card">
+      <button class="faq-header faq-trigger" aria-expanded="false">
+        <span class="faq-title faq-question">
+          How can I purchase a Serenia property?
+        </span>
+        <span class="faq-icon faq-toggle">
+          &#43;
+        </span>
+      </button>
+      <div class="faq-content faq-panel faq-panel-closed">
+        <div class="faq-answer">
+          You can initiate a purchase by visiting any of our official sales galleries, booking an appointment on our online portal, or reaching out directly to our customer care team for a guided consultation.
+        </div>
+      </div>
+    </div>
+
+    <div class="faq-item faq-card">
+      <button class="faq-header faq-trigger" aria-expanded="false">
+        <span class="faq-title faq-question">
+          Does Serenia offer financing or mortgage options?
+        </span>
+        <span class="faq-icon faq-toggle">
+          &#43;
+        </span>
+      </button>
+      <div class="faq-content faq-panel faq-panel-closed">
+        <div class="faq-answer">
+          Yes, we collaborate with premier banking partners to provide customizable mortgage solutions, flexible interest rates, and tailored payment schemes suited to your financial goals.
+        </div>
+      </div>
+    </div>
+
+    <div class="faq-item faq-card">
+      <button class="faq-header faq-trigger" aria-expanded="false">
+        <span class="faq-title faq-question">
+          Is Serenia suitable for both living and investment?
+        </span>
+        <span class="faq-icon faq-toggle">
+          &#43;
+        </span>
+      </button>
+      <div class="faq-content faq-panel faq-panel-closed">
+        <div class="faq-answer">
+          Absolutely. Our developments are designed to enhance modern family lifestyles while yielding high rental returns and strong long-term property values for real estate investors.
+        </div>
+      </div>
+    </div>
+
+    <div class="faq-item faq-card">
+      <button class="faq-header faq-trigger" aria-expanded="false">
+        <span class="faq-title faq-question">
+          Does Serenia manage public facilities within its townships?
+        </span>
+        <span class="faq-icon faq-toggle">
+          &#43;
+        </span>
+      </button>
+      <div class="faq-content faq-panel faq-panel-closed">
+        <div class="faq-answer">
+          Yes, Serenia's dedicated estate management division oversees all public amenities, green parks, security services, and communal infrastructure to ensure optimal upkeep and quality.
+        </div>
+      </div>
+    </div>
+    <div class="faq-item faq-card">
+      <button class="faq-header faq-trigger" aria-expanded="false">
+        <span class="faq-title faq-question">
+          Are there any promotions or special payment plans?
+        </span>
+        <span class="faq-icon faq-toggle">
+          &#43;
+        </span>
+      </button>
+      <div class="faq-content faq-panel faq-panel-closed">
+        <div class="faq-answer">
+          We frequently run early-bird incentives, zero-down-payment options, and special promotional discounts during campaign launches. Contact our sales team for current offers.
+        </div>
+      </div>
+    </div>
+
+  </div>
 </section>
-       </div>
-        <section
-        class="bg-[#141414] py-20 mt-20 px-6 lg:px-16 relative overflow-hidden text-white cta-strip"
-      >
+
+<section
+  class="bg-ink py-20 mt-20 px-6 lg:px-16 relative overflow-hidden text-white cta-strip"
+>
         <div
-          class="max-w-[1400px] mx-auto flex flex-col lg:flex-row items-center justify-between gap-10 relative z-10"
+          class="max-w-350 mx-auto flex flex-col lg:flex-row items-center justify-between gap-10 relative z-10"
         >
           <div class="max-w-xl">
             <h2 class="text-5xl lg:text-[65px] font-normal leading-tight tracking-tight mb-10">
@@ -551,7 +661,7 @@
           </div>
 
           <div
-            class="relative w-full max-w-[500px] h-[300px] lg:h-[400px] flex items-center justify-center image-zoom rounded-2xl overflow-hidden"
+            class="relative w-full max-w-125 h-75 lg:h-100 flex items-center justify-center image-zoom rounded-2xl overflow-hidden"
           >
             <img src="./assets/footer.png" alt="Serenia homes" class="w-full h-full object-cover" />
           </div>
@@ -559,7 +669,7 @@
       </section>
     </main>
         <footer class="bg-[#212121] text-gray-400 pt-16 pb-20 px-6 lg:px-16 border-t border-white/5">
-      <div class="max-w-[1400px] mx-auto">
+      <div class="max-w-350 mx-auto">
         <div class="flex flex-col lg:flex-row justify-between items-start gap-10 mb-20">
           <div>
             <div class="flex items-center gap-2 font-bold text-2xl text-white mb-12">
