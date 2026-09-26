@@ -5,6 +5,8 @@
     <meta name="viewport" content="width=device-width, initial-scale=1.0" />
     <title>Gallery - Serenia</title>
     <link rel="stylesheet" href="../src/output.css" />
+    <link rel="stylesheet" href="./css/serenia.css" />
+    <script src="./js/gallery.js" defer></script>
     <link
       rel="stylesheet"
       href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.5.1/css/all.min.css"
@@ -105,37 +107,5 @@
         </div>
       </section>
     </main>
-    <script>
-      const galleryTrack = document.querySelector("[data-gallery-track]");
-
-      if (galleryTrack) {
-        const previousButton = document.querySelector("[data-gallery-prev]");
-        const nextButton = document.querySelector("[data-gallery-next]");
-        const slides = galleryTrack.querySelectorAll(".gallery-slide");
-
-        const updateControls = () => {
-          previousButton.disabled = galleryTrack.scrollLeft <= 1;
-          nextButton.disabled =
-            galleryTrack.scrollLeft + galleryTrack.clientWidth >= galleryTrack.scrollWidth - 1;
-        };
-
-        const moveGallery = (direction) => {
-          const slideWidth = slides[0].getBoundingClientRect().width;
-          const gap = Number.parseFloat(getComputedStyle(galleryTrack).gap) || 0;
-          galleryTrack.scrollBy({
-            left: direction * (slideWidth + gap),
-            behavior: window.matchMedia("(prefers-reduced-motion: reduce)").matches
-              ? "auto"
-              : "smooth",
-          });
-        };
-
-        previousButton.addEventListener("click", () => moveGallery(-1));
-        nextButton.addEventListener("click", () => moveGallery(1));
-        galleryTrack.addEventListener("scroll", updateControls, { passive: true });
-        window.addEventListener("resize", updateControls);
-        updateControls();
-      }
-    </script>
   </body>
 </html>
