@@ -10,10 +10,34 @@
       rel="stylesheet"
       href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.5.1/css/all.min.css"
     />
+  <style>
+  dialog#tour-request-modal {
+    margin: auto;
+    inset: 0;
+    position: fixed;
+  }
+
+  dialog#tour-request-modal[open] {
+    animation: modal-pop 0.15s ease-out;
+  }
+
+  @keyframes modal-pop {
+    from { 
+      opacity: 0; 
+      transform: scale(0.95); 
+    }
+    to { 
+      opacity: 1; 
+      transform: scale(1); 
+    }
+  }
+</style>
+  <script src="./js/calendar.js" defer></script>
+  <script src="./js/tour-modal.js" defer></script>
   </head>
   <body>
     <nav
-      class="site-nav h-20 w-full px-16 items-center flex justify-between border-b border-gray-100 text-sm"
+      class="site-nav sticky top-0 z-50 flex min-h-20 w-full flex-wrap items-center justify-between gap-4 border-b border-gray-100 bg-white px-4 py-3 text-sm lg:flex-nowrap lg:px-16 lg:py-0"
     >
       <div class="flex items-center gap-2 font-bold text-2xl text-gray-900">
         <a href="./home.html" aria-label="Serenia home">
@@ -21,20 +45,16 @@
         </a>
       </div>
 
-      <div>
+      <div class="hidden lg:block">
         <ul class="flex gap-8 items-center text-sm text-gray-600 font-medium">
           <li class="nav-link hover:text-gray-900 cursor-pointer">
-            <a href="./properties.html" class="inline-flex items-center gap-1"
-              >Properties <i class="fa-solid text-xs fa-caret-down ml-1 dropdown-icon"></i
-            ></a>
+            <a href="./properties.html">Properties</a>
           </li>
           <li class="nav-link hover:text-gray-900 cursor-pointer">
             <a href="./amenities.html">Amenities</a>
           </li>
           <li class="nav-link hover:text-gray-900 cursor-pointer dropdown-wrap">
-            <a href="./gallery.html" class="inline-flex items-center gap-1"
-              >Gallery <i class="fa-solid text-xs fa-caret-down ml-1 dropdown-icon"></i
-            ></a>
+            <a href="./gallery.html">Gallery</a>
           </li>
           <li class="nav-link hover:text-gray-900 cursor-pointer">
             <a href="./blogs.html">Blogs</a>
@@ -42,21 +62,166 @@
         </ul>
       </div>
 
-      <div>
+      <div class="hidden lg:block">
         <ul class="flex gap-4 items-center text-sm">
           <li
             class="nav-link px-4 py-3 hover:text-gray-900 font-medium cursor-pointer text-gray-600"
           >
             <a href="./contactus.html">Contact us</a>
           </li>
-          <li
-            class="nav-button bg-stone hover:bg-gray-200 font-medium px-4 py-3 text-gray-800 cursor-pointer rounded-md"
-          >
-            <a href="./contactus.html">Request tour</a>
+          <li>
+            <button
+  type="button"
+  onclick="document.getElementById('tour-request-modal').showModal()"
+  class="bg-stone h-10 w-30 rounded-sm font-semibold ring-green-800 transition-all duration-300 ease-in-out hover:bg-stone-200 hover:ring-2 hover:ring-offset-2 focus:ring-2 focus:ring-offset-2">
+  Request tour
+</button>
           </li>
         </ul>
       </div>
+      <details class="relative ml-auto lg:hidden">
+        <summary aria-label="Open navigation menu" class="flex h-11 w-11 cursor-pointer list-none items-center justify-center rounded border border-gray-200 text-gray-800 hover:bg-stone [&::-webkit-details-marker]:hidden">
+          <svg class="h-5 w-5" viewBox="0 0 24 24" fill="none" stroke="currentColor" aria-hidden="true">
+            <path d="M4 7h16M4 12h16M4 17h16" stroke-linecap="round" stroke-width="1.8" />
+          </svg>
+        </summary>
+        <div class="absolute right-0 top-full z-50 mt-2 w-64 border border-gray-200 bg-white p-3 shadow-lg">
+          <a href="./properties.html" class="block rounded px-3 py-2 text-gray-700 hover:bg-stone">Properties</a>
+          <a href="./amenities.html" class="block rounded px-3 py-2 text-gray-700 hover:bg-stone">Amenities</a>
+          <a href="./gallery.html" class="block rounded px-3 py-2 text-gray-700 hover:bg-stone">Gallery</a>
+          <a href="./blogs.html" class="block rounded px-3 py-2 text-gray-700 hover:bg-stone">Blogs</a>
+          <a href="./contactus.html" class="block rounded px-3 py-2 text-gray-700 hover:bg-stone">Contact us</a>
+          <button type="button" onclick="document.getElementById('tour-request-modal').showModal()" class="mt-2 w-full rounded bg-olive px-3 py-2 font-medium text-white hover:bg-olive-dark">Request tour</button>
+        </div>
+      </details>
     </nav>
+<dialog 
+  id="tour-request-modal" 
+  class="rounded-xl shadow-box p-0 max-w-4xl w-full backdrop:bg-black/40 backdrop:backdrop-blur-sm border-0">
+  
+  <div class="p-6 md:p-8 bg-white max-h-[90vh] overflow-y-auto rounded-xl">
+
+    <div class="flex justify-between items-center pb-4 mb-6 ">
+      <h2 class="">Request tour</h2>
+      
+      <!-- Native Close Form -->
+      <form method="dialog">
+        <button type="submit" class="text-gray-400 hover:text-gray-600 text-2xl leading-none">&times;</button>
+      </form>
+    </div>
+    <div class="grid grid-cols-1 md:grid-cols-2 gap-8">
+      <div class="space-y-6">
+        <div class="calendar-card bg-white p-6 sm:p-8 shadow-box">
+          <div class="mb-8 flex items-center justify-between">
+            <button type="button" data-calendar-prev aria-label="Previous month" class="text-2xl text-gray-400 hover:text-gray-600 transition-colors px-2">&lsaquo;</button>
+            <h3 data-calendar-title class="text-[18px] font-bold text-gray-800"></h3>
+            <button type="button" data-calendar-next aria-label="Next month" class="text-2xl text-gray-400 hover:text-gray-600 transition-colors px-2">&rsaquo;</button>
+          </div>
+          <div class="mb-5 grid grid-cols-7 text-center">
+            <span class="text-[11px] font-bold tracking-wider text-gray-300">MON</span>
+            <span class="text-[11px] font-bold tracking-wider text-gray-300">TUE</span>
+            <span class="text-[11px] font-bold tracking-wider text-gray-300">WED</span>
+            <span class="text-[11px] font-bold tracking-wider text-gray-300">THU</span>
+            <span class="text-[11px] font-bold tracking-wider text-gray-300">FRI</span>
+            <span class="text-[11px] font-bold tracking-wider text-gray-300">SAT</span>
+            <span class="text-[11px] font-bold tracking-wider text-gray-300">SUN</span>
+          </div>
+          <div data-calendar-days class="grid grid-cols-7 gap-y-3 justify-items-center"></div>
+        </div>
+
+        <!-- Preferred Time Dropdown -->
+        <div class="border border-gray-200 p-4">
+          <div class="flex items-center gap-2 mb-3 font-medium text-gray-700">
+            <svg class="w-5 h-5 text-gray-500" fill="none" stroke="currentColor" viewBox="0 0 24 24">
+              <path stroke-linecap="round" stroke-linejoin="round" stroke-width="2" d="M12 8v4l3 3m6-3a9 9 0 11-18 0 9 9 0 0118 0z"/>
+            </svg>
+            <span class="text-sm font-semibold">Select time</span>
+          </div>
+          <div>
+            <label class="block text-xs font-semibold text-gray-700 mb-1">Preferred time</label>
+            <select class="w-full border border-gray-300 p-2.5 text-sm text-gray-700 focus:ring-1 focus:ring-black outline-none bg-white">
+              <option value="">Select time</option>
+              <option value="10:00">10:00 AM</option>
+              <option value="12:00">12:00 PM</option>
+              <option value="14:00">02:00 PM</option>
+              <option value="16:00">04:00 PM</option>
+            </select>
+          </div>
+        </div>
+
+      </div>
+
+      <form method="post" class="space-y-4">
+        <input type="hidden" name="tour-date" />
+        
+        <div>
+          <label class="block text-xs font-semibold text-gray-700 mb-1">Full name</label>
+          <input type="text" placeholder="Enter your name" class="w-full border border-gray-300 p-2.5 text-sm focus:ring-1 focus:ring-black outline-none" required />
+        </div>
+
+        <div>
+          <label class="block text-xs font-semibold text-gray-700 mb-1">Email address</label>
+          <input type="email" placeholder="Enter your email" class="w-full border border-gray-300 p-2.5 text-sm focus:ring-1 focus:ring-black outline-none" required />
+        </div>
+
+        <div>
+          <label class="block text-xs font-semibold text-gray-700 mb-1">Phone number</label>
+          <div class="flex border border-gray-300 overflow-hidden focus-within:ring-1 focus-within:ring-black">
+            <div class="flex items-center gap-1 bg-gray-50 px-3 border-r border-gray-300 text-sm">
+              <span>🇺🇸</span>
+              <select class="bg-transparent text-sm focus:outline-none cursor-pointer">
+                <option value="+1">+1</option>
+                <option value="+44">+44</option>
+              </select>
+            </div>
+            <input type="tel" placeholder="Enter your number" class="w-full p-2.5 text-sm outline-none" required />
+          </div>
+        </div>
+
+        <div>
+          <label class="block text-xs font-semibold text-gray-700 mb-1">Cluster</label>
+          <select class="w-full border border-gray-300 p-2.5 text-sm text-gray-700 focus:ring-1 focus:ring-black outline-none bg-white">
+            <option value="">Select cluster</option>
+            <option value="A">Cluster A</option>
+            <option value="B">Cluster B</option>
+          </select>
+        </div>
+
+        <div class="grid grid-cols-2 gap-4">
+          <div>
+            <label class="block text-xs font-semibold text-gray-700 mb-1">Property type</label>
+            <select class="w-full border border-gray-300 p-2.5 text-sm text-gray-700 focus:ring-1 focus:ring-black outline-none bg-white">
+              <option value="">Select type</option>
+              <option value="villa">Villa</option>
+              <option value="apartment">Apartment</option>
+            </select>
+          </div>
+          <div>
+            <label class="block text-xs font-semibold text-gray-700 mb-1">Unit</label>
+            <select class="w-full border border-gray-300 p-2.5 text-sm text-gray-700 focus:ring-1 focus:ring-black outline-none bg-white">
+              <option value="">Select unit</option>
+              <option value="101">101</option>
+              <option value="102">102</option>
+            </select>
+          </div>
+        </div>
+
+        <div>
+          <label class="block text-xs font-semibold text-gray-700 mb-1">Note</label>
+          <textarea placeholder="Enter message" rows="3" class="w-full border border-gray-300 p-2.5 text-sm focus:ring-1 focus:ring-black outline-none resize-none"></textarea>
+        </div>
+
+        <div class="pt-2 flex justify-end">
+          <button type="submit" class="bg-[#52593b] text-white px-8 py-2.5 font-medium text-sm hover:bg-[#434930] transition">
+            Submit
+          </button>
+        </div>
+
+      </form>
+
+    </div>
+  </div>
+</dialog>
 
     <main>
       <section class="home-hero flex h-120">
@@ -768,5 +933,25 @@
         </div>
       </div>
     </footer>
+    <script>
+  (() => {
+    const tourModal = document.getElementById('tour-request-modal');
+    if (!tourModal) return;
+
+    tourModal.addEventListener('click', (event) => {
+      const bounds = tourModal.getBoundingClientRect();
+      const isOutside = (
+        event.clientX < bounds.left ||
+        event.clientX > bounds.right ||
+        event.clientY < bounds.top ||
+        event.clientY > bounds.bottom
+      );
+
+      if (isOutside) {
+        tourModal.close();
+      }
+    });
+  })();
+</script>
   </body>
 </html>

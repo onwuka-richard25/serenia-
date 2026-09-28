@@ -1,204 +1,478 @@
-<!doctype html>
+<!DOCTYPE html>
 <html lang="en">
-  <head>
-    <meta charset="UTF-8" />
-    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
-    <title>Amenities - Serenia</title>
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Amenities & Facilities - Serenia</title>
     <link rel="stylesheet" href="../src/output.css" />
     <link rel="stylesheet" href="./css/serenia.css" />
-    <link
-      rel="stylesheet"
-      href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.5.1/css/all.min.css"
-    />
-  </head>
-  <body class="bg-[#f7f5f1] min-h-screen text-gray-800">
-    <nav class="site-nav h-20 w-full px-6 md:px-16 items-center flex justify-between text-sm">
-      <div class="flex items-center gap-2 font-bold text-2xl text-gray-900">
-        <a href="./home.html" aria-label="Serenia home">
-          <img src="./assets/Logo (1).png" alt="logo" class="w-auto block" />
-        </a>
-      </div>
-      <div>
-        <ul class="flex gap-8 lg:gap-12 items-center text-sm text-gray-600 font-medium">
-          <li class="nav-link">
-            <a href="./properties.html" class="inline-flex items-center gap-1"
-              >Properties <i class="fa-solid text-xs fa-caret-down ml-1 dropdown-icon"></i
-            ></a>
-          </li>
-          <li class="nav-link text-gray-900 border-b-2 border-gray-900 pb-2">
-            <a href="./amenities.html">Amenities</a>
-          </li>
-          <li class="nav-link">
-            <a href="./gallery.html" class="inline-flex items-center gap-1"
-              >Gallery <i class="fa-solid text-xs fa-caret-down ml-1 dropdown-icon"></i
-            ></a>
-          </li>
-          <li class="nav-link"><a href="./blogs.html">Blogs</a></li>
-        </ul>
-      </div>
-      <div>
-        <ul class="flex gap-4 lg:gap-6 items-center">
-          <li class="nav-link px-4 py-3 font-medium cursor-pointer text-gray-600">
-            <a href="./contactus.html">Contact us</a>
-          </li>
-          <li
-            class="action-btn bg-[#f3f3f3] font-medium px-5 py-3 text-gray-800 cursor-pointer rounded-md"
-          >
-            <a href="./contactus.html">Request tour</a>
-          </li>
-        </ul>
-      </div>
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.5.1/css/all.min.css" />
+    <script src="./js/calendar.js" defer></script>
+    <script src="./js/tour-modal.js" defer></script>
+</head>
+<body class="bg-stone">
+
+    <!-- 2. Main Site Navigation -->
+    <nav class="site-nav sticky top-0 z-50 flex min-h-20 w-full flex-wrap items-center justify-between gap-4 border-b border-gray-100 bg-white px-4 py-3 text-sm lg:flex-nowrap lg:px-16 lg:py-0">
+        <div class="flex items-center gap-2 font-medium text-2xl text-gray-900">
+            <a href="./home.html" class="flex items-center gap-2.5">
+                <img src="./assets/Logo (1).png" alt="Serenia" class="h-7 w-auto" />
+            </a>
+        </div>
+        <div class="hidden lg:block">
+            <ul class="flex gap-8 lg:gap-12 items-center text-sm text-gray-600 font-medium">
+                <li class="nav-link"><a href="./properties.html" class="hover:text-gray-900">Properties</a></li>
+                <li class="nav-link text-gray-900 font-semibold border-b-2 border-gray-900 pb-3"><a href="./amenities.html">Amenities</a></li>
+                <li class="nav-link"><a href="./gallery.html" class="hover:text-gray-900">Gallery</a></li>
+                <li class="nav-link"><a href="./blogs.html" class="hover:text-gray-900">Blogs</a></li>
+            </ul>
+        </div>
+        <div class="hidden lg:block">
+            <ul class="flex gap-4 lg:gap-6 items-center">
+                <li class="nav-link px-4 py-3 font-medium text-gray-600"><a href="./contactus.html" class="hover:text-gray-900">Contact us</a></li>
+                <li class="action-btn bg-stone hover:bg-gray-200 font-medium px-5 py-2.5 text-gray-800 rounded-md transition-colors">
+                    <a href="./contactus.html">Request tour</a>
+                </li>
+            </ul>
+        </div>
+        <details class="relative ml-auto lg:hidden">
+          <summary aria-label="Open navigation menu" class="flex h-11 w-11 cursor-pointer list-none items-center justify-center rounded border border-gray-200 text-gray-800 hover:bg-stone [&::-webkit-details-marker]:hidden">
+            <svg class="h-5 w-5" viewBox="0 0 24 24" fill="none" stroke="currentColor" aria-hidden="true"><path d="M4 7h16M4 12h16M4 17h16" stroke-linecap="round" stroke-width="1.8" /></svg>
+          </summary>
+          <div class="absolute right-0 top-full z-50 mt-2 w-72 max-w-[calc(100vw-2rem)] border border-gray-200 bg-white p-3 shadow-lg">
+            <a href="./properties.html" class="block rounded px-3 py-2 text-gray-700 hover:bg-stone">Properties</a>
+            <a href="./amenities.html" class="block rounded px-3 py-2 text-gray-700 hover:bg-stone" aria-current="page">Amenities</a>
+            <a href="./gallery.html" class="block rounded px-3 py-2 text-gray-700 hover:bg-stone">Gallery</a>
+            <a href="./blogs.html" class="block rounded px-3 py-2 text-gray-700 hover:bg-stone">Blogs</a>
+            <a href="./contactus.html" class="block rounded px-3 py-2 text-gray-700 hover:bg-stone">Contact us</a>
+            <a href="./contactus.html" class="mt-2 block rounded bg-olive px-3 py-2 text-center font-medium text-white hover:bg-olive-dark">Request tour</a>
+          </div>
+        </details>
     </nav>
 
-    <main class="site-shell px-4 py-10 lg:px-8 lg:py-14">
-      <section class="text-center py-8 lg:py-14 reveal">
-        <p class="text-sm uppercase tracking-[0.24em] text-gray-500">Lifestyle & comfort</p>
-        <h1 class="hero-title mt-4 text-5xl lg:text-7xl font-medium leading-tight text-gray-900">
-          Amenities designed for everyday ease
-        </h1>
-      </section>
+    <main>
+        <section class="max-w-full pt-16 pb-12 text-center">
+            <h1 class="text-7xl font-medium text-gray-900 leading-[1.1] max-w-2xl mx-auto tracking-tight">
+                Facilities<br>designed around<br>your needs
+            </h1>
+            <p class="text-[17px] text-gray-800 max-w-lg mx-auto mt-6 leading-relaxed">
+                Discover thoughtfully planned amenities and modern <br> facilities designed to support a vibrant, comfortable, <br> and connected lifestyle within Serenia.
+            </p>
 
-      <section class="grid grid-cols-1 md:grid-cols-2 xl:grid-cols-4 gap-6 mt-8">
-        <article class="feature-card rounded-[26px] p-6 reveal">
-          <div class="flex items-center justify-between mb-5">
-            <div
-              class="w-12 h-12 rounded-2xl bg-[#f4efe4] text-[#8a5b00] flex items-center justify-center"
-            >
-              <i class="fa-solid fa-dumbbell"></i>
-            </div>
-            <span class="text-xs uppercase tracking-[0.2em] text-gray-400">Wellness</span>
-          </div>
-          <h2 class="text-2xl font-medium text-gray-900 mb-3">Fitness studio</h2>
-          <p class="text-gray-500">
-            Private training suites and cardio spaces designed for mindful daily movement.
-          </p>
-        </article>
+            <section class="flex gap-3 h-210 justify-center w-full">
+                <div class="space-y-5">
+                    <img src="./assets/smelltenniscourtnet.png" class="w-70" alt="">
+                    <img src="./assets/basketballcourtwithhunchback.png" class="w-70" alt="">
+                </div>
+                <div class="mt-49 space-y-5">
+                    <img src="./assets/stupidgym.png" class="w-90"  alt="">
+                    <img src="./assets/crazychildren.png" class="w-90" alt="">
+                </div>
+                <div class="space-y-5 mt-75">
+                    <img src="./assets/unnamedresturant.png" class="w-90" alt="">
+                    <img src="./assets/uglykeke.png" class="w-90" alt="">
+                </div>
+                <div class="space-y-5 mt-49">
+                    <img src="./assets/thatladyagain.png" class="w-90" alt="">
+                    <img src="./assets/deadzone.png" class="w-90" alt="">
+                </div>
+                <div class="space-y-5">
+                    <img src="./assets/dirtypool.png" class="w-90" alt="">
+                    <img src="./assets/thatuglybushagain.png" class="w-70" alt="">
+                </div>
+            </section>
 
-        <article class="feature-card rounded-[26px] p-6 reveal delay-1">
-          <div class="flex items-center justify-between mb-5">
-            <div
-              class="w-12 h-12 rounded-2xl bg-[#eff4ea] text-[#3d5c2d] flex items-center justify-center"
-            >
-              <i class="fa-solid fa-water-ladder"></i>
-            </div>
-            <span class="text-xs uppercase tracking-[0.2em] text-gray-400">Resort</span>
-          </div>
-          <h2 class="text-2xl font-medium text-gray-900 mb-3">Infinity pool</h2>
-          <p class="text-gray-500">
-            A panoramic pool deck and lounge spaces for relaxed evenings and family use.
-          </p>
-        </article>
 
-        <article class="feature-card rounded-[26px] p-6 reveal delay-2">
-          <div class="flex items-center justify-between mb-5">
-            <div
-              class="w-12 h-12 rounded-2xl bg-[#eef3f9] text-[#28507a] flex items-center justify-center"
-            >
-              <i class="fa-solid fa-shield-heart"></i>
-            </div>
-            <span class="text-xs uppercase tracking-[0.2em] text-gray-400">Secure</span>
-          </div>
-          <h2 class="text-2xl font-medium text-gray-900 mb-3">24/7 security</h2>
-          <p class="text-gray-500">
-            Smart access control, concierge desks, and monitored gated community entry.
-          </p>
-        </article>
-
-        <article class="feature-card rounded-[26px] p-6 reveal delay-3">
-          <div class="flex items-center justify-between mb-5">
-            <div
-              class="w-12 h-12 rounded-2xl bg-[#f7f0f0] text-[#7b3b3b] flex items-center justify-center"
-            >
-              <i class="fa-solid fa-leaf"></i>
-            </div>
-            <span class="text-xs uppercase tracking-[0.2em] text-gray-400">Green</span>
-          </div>
-          <h2 class="text-2xl font-medium text-gray-900 mb-3">Garden spaces</h2>
-          <p class="text-gray-500">
-            Forest walks, landscaped courtyards, and children’s play environments.
-          </p>
-        </article>
-      </section>
-
-      <section class="mt-12 grid grid-cols-1 lg:grid-cols-[1.1fr_0.9fr] gap-6">
-        <div class="glass-panel rounded-[28px] p-6 lg:p-8 reveal">
-          <div class="flex items-center justify-between mb-6">
-            <h2 class="text-3xl font-medium text-gray-900">Community experience</h2>
-            <span
-              class="px-3 py-1 rounded-full bg-[#f4efe4] text-[#8a5b00] text-xs uppercase tracking-[0.16em]"
-              >Included</span
-            >
-          </div>
-          <div class="space-y-5">
-            <div
-              class="flex items-center gap-4 p-4 rounded-2xl bg-[#faf9f5] border border-gray-200"
-            >
-              <div
-                class="w-10 h-10 rounded-xl bg-white flex items-center justify-center text-[#1b1d16]"
-              >
-                <i class="fa-solid fa-users"></i>
-              </div>
-              <div>
-                <h3 class="font-medium text-gray-900">Resident lounges</h3>
-                <p class="text-sm text-gray-500">
-                  Social spaces for hosting and community engagement.
+        <!-- 4. General Facilities  -->
+        <section class="max-w-full -translate-y-40 bg-stone pt-20">
+            <div class="text-center mb-16">
+                <h2 class="text-5xl font-medium text-gray-900 tracking-tight">General facilities</h2>
+                <p class="text-md text-gray-800 mt-3 max-w-sm mx-auto leading-relaxed">
+                    Facilities and amenities available in all types of  <br>clusters, from Type-A to Type-C
                 </p>
+            </div>
+<div class="flex">
+            <div class="w-1/2 h-full">
+              <img src="./assets/Image (1).png" alt="" class="object-center w-full" />
+            </div>
+            <div class="w-1/2 h-221">
+              <div class="divide-y divide-gray-300 flex h-full flex-col">
+                <a
+                  href=""
+                  class="flex-1 py-5 px-8 flex items-center justify-center hover:text-gray-900 text-gray-400 text-xl text-center hover:font-semibold hover:text-4xl transition-all duration-300 hover:bg-gray-50/80"
+                >
+                  <span class="inline-flex items-baseline gap-2">
+                    <span class="font-normal">Sports Facilities</span>
+                    <span class="text-xs font-medium text-gray-300">01</span>
+                  </span>
+                </a>
+
+                <a
+                  href=""
+                  class="flex-1 py-5 px-8 flex items-center justify-center hover:text-gray-900 text-gray-400 text-2xl text-center hover:font-semibold hover:text-4xl transition-all duration-300 hover:bg-gray-50/80"
+                >
+                  <span class="inline-flex items-baseline gap-2">
+                    <span class="font-normal transition-colors">The Lifestyle Center</span>
+                    <span class="text-xs font-medium text-gray-300">02</span>
+                  </span>
+                </a>
+
+                <a
+                  href=""
+                  class="flex-1 py-5 px-8 flex items-center justify-center hover:text-gray-900 text-gray-400 text-3xl text-center hover:font-semibold hover:text-4xl transition-all duration-300 hover:bg-gray-50/80"
+                >
+                  <span class="inline-flex items-baseline gap-2">
+                    <span class="font-normal">Children’s Playground</span>
+                    <span class="text-xs font-medium text-gray-400">03</span>
+                  </span>
+                </a>
+
+                <a
+                  href=""
+                  class="flex-1 py-7 px-8 flex items-center justify-center hover:text-gray-900 text-4xl text-center hover:font-semibold hover:text-5xl transition-all duration-400 hover:bg-gray-50/80"
+                >
+                  <span class="inline-flex items-baseline gap-2">
+                    <span class="text-gray-700 tracking-tight">Golf central playground</span>
+                    <span class="text-sm font-medium text-gray-400">04</span>
+                  </span>
+                </a>
+
+                <a
+                  href=""
+                  class="flex-1 py-5 px-8 flex items-center justify-center text-gray-500 hover:text-gray-900 text-3xl text-center hover:font-semibold hover:text-4xl transition-all duration-300 hover:bg-gray-50/80"
+                >
+                  <span class="inline-flex items-baseline gap-2">
+                    <span class="font-normal">Retail & Lifestyle Center</span>
+                    <span class="text-xs font-medium">05</span>
+                  </span>
+                </a>
+
+                <a
+                  href=""
+                  class="flex-1 py-5 px-8 flex items-center justify-center hover:text-gray-900 text-gray-400 text-2xl text-center hover:font-semibold hover:text-4xl transition-all duration-300 hover:bg-gray-50/80"
+                >
+                  <span class="inline-flex items-baseline gap-2">
+                    <span class="font-normal">Cluster clubhouse</span>
+                    <span class="text-xs font-medium text-gray-300">06</span>
+                  </span>
+                </a>
+
+                <a
+                  href=""
+                  class="flex-1 py-8 px-8 flex items-center justify-center text-gray-300 hover:text-gray-900 text-xl text-center hover:font-semibold hover:text-4xl transition-all duration-300 hover:bg-gray-50/80"
+                >
+                  <span class="inline-flex items-baseline gap-2">
+                    <span class="font-normal">Jogging track</span>
+                    <span class="text-xs font-medium text-gray-300">07</span>
+                  </span>
+                </a>
               </div>
             </div>
-            <div
-              class="flex items-center gap-4 p-4 rounded-2xl bg-[#faf9f5] border border-gray-200"
-            >
-              <div
-                class="w-10 h-10 rounded-xl bg-white flex items-center justify-center text-[#1b1d16]"
-              >
-                <i class="fa-solid fa-bicycle"></i>
-              </div>
-              <div>
-                <h3 class="font-medium text-gray-900">Cycling tracks</h3>
-                <p class="text-sm text-gray-500">Dedicated routes for active outdoor living.</p>
-              </div>
-            </div>
-            <div
-              class="flex items-center gap-4 p-4 rounded-2xl bg-[#faf9f5] border border-gray-200"
-            >
-              <div
-                class="w-10 h-10 rounded-xl bg-white flex items-center justify-center text-[#1b1d16]"
-              >
-                <i class="fa-solid fa-cowbell"></i>
-              </div>
-              <div>
-                <h3 class="font-medium text-gray-900">Kids play zones</h3>
-                <p class="text-sm text-gray-500">
-                  Safe, colorful spaces for joyful family moments.
-                </p>
-              </div>
-            </div>
-          </div>
         </div>
+        <!-- 5. Exclusive Facilities in Each Cluster Section -->
+        <section class="bg-[#f9f9f9] py-20 px-6 lg:px-16 border-t border-gray-100">
+            <div class="max-w-350 mx-auto">
+                <div class="flex flex-col md:flex-row justify-between items-start md:items-end gap-6 mb-16">
+                    <h2 class="text-4xl lg:text-4xl text-start font-medium text-gray-900 max-w-sm leading-tight tracking-tight">
+                        Exclusive <br> facilities in each <br> cluster
+                    </h2>
+                    <p class="text-xs text-gray-500 max-w-xs text-start leading-relaxed">
+                        Every cluster is thoughtfully designed with its own <br> set of facilities, ensuring comfort and convenience <br> for residents in every neighborhood.
+                    </p>
+                </div>
 
-        <div class="glass-panel rounded-[28px] p-6 lg:p-8 reveal delay-1">
-          <h2 class="text-3xl font-medium text-gray-900 mb-6">Your everyday luxury</h2>
-          <div class="space-y-4">
-            <div class="rounded-2xl bg-[#1b1d16] text-white p-5">
-              <div class="flex items-center justify-between">
-                <span class="text-sm uppercase tracking-[0.18em] text-white/70">Lifestyle</span>
-                <i class="fa-solid fa-arrow-right-long"></i>
-              </div>
-              <p class="mt-4 text-2xl font-medium">Calm, premium, connected living.</p>
+                <div class="space-y-12">
+
+                    <!-- Liora estate -->
+                   <div class="bg-white shadow-bocx p-10">
+                     <div class="grid grid-cols-1 lg:grid-cols-12 gap-8 items-start">
+                        <div class="lg:col-span-4 pt-2">
+                            <h3 class="text-3xl font-medium text-gray-900">Liora estate</h3>
+                        </div>
+                        <div class="lg:col-span-8 bg-white border border-gray-200/80 overflow-hidden shadow-sm">
+                            <!-- Item 1 (Expanded) -->
+                            <div class="p-6 border-b border-gray-100">
+                                <div class="flex items-center justify-between cursor-pointer mb-3">
+                                    <h4 class="text-3xl font-medium text-gray-900">Infinity Swimming Pool</h4>
+                                    <div class="flex items-center gap-2">
+                                        <i class="fa-solid fa-[#000000] fa-hand-pointer text-xs text-gray-500"></i>
+                                        <div class="flex h-6 w-6 items-center justify-center rounded bg-slate-100 text-xs font-bold text-slate-600">−</div>
+                                    </div>
+                                </div>
+                                <p class="text-sm text-justify text-gray-500 leading-relaxed mb-4 max-w-xl">
+                                    A stylish pool that blends seamlessly with the horizon, offering breathtaking <br> scenic views. It's designed for both relaxation and leisure swims, creating a good  <br>serene atmosphere where you can unwind and enjoy moments of tranquility.
+                                </p>
+                                <div class="w-full h-65 sm:h-65 overflow-hidden bg-slate-100">
+                                    <img src="./assets/supidpool.png" alt="Infinity Swimming Pool" class="w-full h-full object-cover">
+                                </div>
+                            </div>
+
+                            <!-- Item 2 -->
+                            <div class="px-6 py-4 border-b border-gray-100 flex items-center justify-between cursor-pointer hover:bg-slate-50">
+                                <span class="text-sm font-semibold text-gray-800">Residents' Lounge & Coffee Corner</span>
+                                <div class="flex h-6 w-6 items-center justify-center rounded bg-slate-100 text-xs font-bold text-slate-600">+</div>
+                            </div>
+
+                            <!-- Item 3 -->
+                            <div class="px-6 py-4 border-b border-gray-100 flex items-center justify-between cursor-pointer hover:bg-slate-50">
+                                <span class="text-sm font-semibold text-gray-800">Children's Creative Playground</span>
+                                <div class="flex h-6 w-6 items-center justify-center rounded bg-slate-100 text-xs font-bold text-slate-600">+</div>
+                            </div>
+
+                            <!-- Item 4 -->
+                            <div class="px-6 py-4 flex items-center justify-between cursor-pointer hover:bg-slate-50">
+                                <span class="text-sm font-semibold text-gray-800">Private Jogging Loop</span>
+                                <div class="flex h-6 w-6 items-center justify-center rounded bg-slate-100 text-xs font-bold text-slate-600">+</div>
+                            </div>
+                        </div>
+                    </div>
+
+                   </div>
+                    <!-- Nava heights -->
+                   <div class="shadow-bocx p-10">
+                         <div class="grid grid-cols-1 lg:grid-cols-12 gap-8 items-start">
+                        <div class="lg:col-span-4 pt-2">
+                            <h3 class="text-2xl font-bold text-gray-900">Nava heights</h3>
+                        </div>
+                        <div class="lg:col-span-8 bg-white border border-gray-200/80 overflow-hidden shadow-sm">
+                            <div class="px-6 py-4 border-b border-gray-100 flex items-center justify-between cursor-pointer hover:bg-slate-50">
+                                <span class="text-sm font-semibold text-gray-800">Sky Deck Viewing Terrace</span>
+                                <div class="flex h-6 w-6 items-center justify-center rounded bg-slate-100 text-xs font-bold text-slate-600">+</div>
+                            </div>
+                            <div class="px-6 py-4 border-b border-gray-100 flex items-center justify-between cursor-pointer hover:bg-slate-50">
+                                <span class="text-sm font-semibold text-gray-800">Rooftop Yoga & Wellness Area</span>
+                                <div class="flex h-6 w-6 items-center justify-center rounded bg-slate-100 text-xs font-bold text-slate-600">+</div>
+                            </div>
+                            <div class="px-6 py-4 border-b border-gray-100 flex items-center justify-between cursor-pointer hover:bg-slate-50">
+                                <span class="text-sm font-semibold text-gray-800">Indoor Gym & Fitness Studio</span>
+                                <div class="flex h-6 w-6 items-center justify-center rounded bg-slate-100 text-xs font-bold text-slate-600">+</div>
+                            </div>
+                            <div class="px-6 py-4 flex items-center justify-between cursor-pointer hover:bg-slate-50">
+                                <span class="text-sm font-semibold text-gray-800">BBQ & Outdoor Dining Pavilion</span>
+                                <div class="flex h-6 w-6 items-center justify-center rounded bg-slate-100 text-xs font-bold text-slate-600">+</div>
+                            </div>
+                        </div>
+                    </div>
+                   </div>
+                    <!-- Aruna residence -->
+                   <div class="p-10 shadow-bocx">
+                     <div class="grid grid-cols-1 lg:grid-cols-12 gap-8 items-start">
+                        <div class="lg:col-span-4 pt-2">
+                            <h3 class="text-3xl font-medium text-gray-900">Aruna residence</h3>
+                        </div>
+                        <div class="lg:col-span-8 bg-white border border-gray-200/80 overflow-hidden shadow-sm">
+                            <div class="px-6 py-4 border-b border-gray-100 flex items-center justify-between cursor-pointer hover:bg-slate-50">
+                                <span class="text-sm font-semibold text-gray-800">Central Playground with Smart Play Equipment</span>
+                                <div class="flex h-6 w-6 items-center justify-center rounded bg-slate-100 text-xs font-bold text-slate-600">+</div>
+                            </div>
+                            <div class="px-6 py-4 border-b border-gray-100 flex items-center justify-between cursor-pointer hover:bg-slate-50">
+                                <span class="text-sm font-semibold text-gray-800">Multipurpose Community Hall</span>
+                                <div class="flex h-6 w-6 items-center justify-center rounded bg-slate-100 text-xs font-bold text-slate-600">+</div>
+                            </div>
+                            <div class="px-6 py-4 border-b border-gray-100 flex items-center justify-between cursor-pointer hover:bg-slate-50">
+                                <span class="text-sm font-semibold text-gray-800">Mini Market & Daily Needs Kiosk</span>
+                                <div class="flex h-6 w-6 items-center justify-center rounded bg-slate-100 text-xs font-bold text-slate-600">+</div>
+                            </div>
+                            <div class="px-6 py-4 flex items-center justify-between cursor-pointer hover:bg-slate-50">
+                                <span class="text-sm font-semibold text-gray-800">Cycling Track</span>
+                                <div class="flex h-6 w-6 items-center justify-center rounded bg-slate-100 text-xs font-bold text-slate-600">+</div>
+                            </div>
+                        </div>
+                    </div>
+                   </div>
+
+                    <!-- Velora park -->
+
+<div class="shadow-bocx p-10">
+                        <div class="grid grid-cols-1 lg:grid-cols-12 gap-8 items-start">
+                        <div class="lg:col-span-4 pt-2">
+                            <h3 class="text-2xl font-bold text-gray-900">Velora park</h3>
+                        </div>
+                        <div class="lg:col-span-8 bg-white border border-gray-200/80 overflow-hidden shadow-sm">
+                            <div class="px-6 py-4 border-b border-gray-100 flex items-center justify-between cursor-pointer hover:bg-slate-50">
+                                <span class="text-sm font-semibold text-gray-800">Basketball Court</span>
+                                <div class="flex h-6 w-6 items-center justify-center rounded bg-slate-100 text-xs font-bold text-slate-600">+</div>
+                            </div>
+                            <div class="px-6 py-4 border-b border-gray-100 flex items-center justify-between cursor-pointer hover:bg-slate-50">
+                                <span class="text-sm font-semibold text-gray-800">Skate & Roller Park</span>
+                                <div class="flex h-6 w-6 items-center justify-center rounded bg-slate-100 text-xs font-bold text-slate-600">+</div>
+                            </div>
+                            <div class="px-6 py-4 border-b border-gray-100 flex items-center justify-between cursor-pointer hover:bg-slate-50">
+                                <span class="text-sm font-semibold text-gray-800">Open Green Amphitheater</span>
+                                <div class="flex h-6 w-6 items-center justify-center rounded bg-slate-100 text-xs font-bold text-slate-600">+</div>
+                            </div>
+                            <div class="px-6 py-4 flex items-center justify-between cursor-pointer hover:bg-slate-50">
+                                <span class="text-sm font-semibold text-gray-800">Community Garden Plots</span>
+                                <div class="flex h-6 w-6 items-center justify-center rounded bg-slate-100 text-xs font-bold text-slate-600">+</div>
+                            </div>
+                        </div>
+                    </div>
+
+</div>
+                    <!-- Seraya grove -->
+                   <div  class="shadow-bocx p-10">
+                     <div class="grid grid-cols-1 lg:grid-cols-12 gap-8 items-start">
+                        <div class="lg:col-span-4 pt-2">
+                            <h3 class="text-2xl font-bold text-gray-900">Seraya grove</h3>
+                        </div>
+                        <div class="lg:col-span-8 bg-white border border-gray-200/80 overflow-hidden shadow-sm">
+                            <div class="px-6 py-4 border-b border-gray-100 flex items-center justify-between cursor-pointer hover:bg-slate-50">
+                                <span class="text-sm font-semibold text-gray-800">Exclusive Clubhouse</span>
+                                <div class="flex h-6 w-6 items-center justify-center rounded bg-slate-100 text-xs font-bold text-slate-600">+</div>
+                            </div>
+                            <div class="px-6 py-4 border-b border-gray-100 flex items-center justify-between cursor-pointer hover:bg-slate-50">
+                                <span class="text-sm font-semibold text-gray-800">Reading Pavilion & Library Corner</span>
+                                <div class="flex h-6 w-6 items-center justify-center rounded bg-slate-100 text-xs font-bold text-slate-600">+</div>
+                            </div>
+                            <div class="px-6 py-4 border-b border-gray-100 flex items-center justify-between cursor-pointer hover:bg-slate-50">
+                                <span class="text-sm font-semibold text-gray-800">Pet-Friendly Park</span>
+                                <div class="flex h-6 w-6 items-center justify-center rounded bg-slate-100 text-xs font-bold text-slate-600">+</div>
+                            </div>
+                            <div class="px-6 py-4 flex items-center justify-between cursor-pointer hover:bg-slate-50">
+                                <span class="text-sm font-semibold text-gray-800">Outdoor Swimming Pool with Kids' Splash Area</span>
+                                <div class="flex h-6 w-6 items-center justify-center rounded bg-slate-100 text-xs font-bold text-slate-600">+</div>
+                            </div>
+                        </div>
+                    </div>
+
+                   </div>
+                </div>
             </div>
-            <div class="grid grid-cols-2 gap-4 text-center">
-              <div class="p-5 rounded-2xl bg-[#f4efe4]">
-                <div class="text-3xl font-semibold text-gray-900">5K+</div>
-                <div class="mt-2 text-sm text-gray-600">sq ft facilities</div>
-              </div>
-              <div class="p-5 rounded-2xl bg-[#edf3ea]">
-                <div class="text-3xl font-semibold text-gray-900">18</div>
-                <div class="mt-2 text-sm text-gray-600">amenity zones</div>
-              </div>
+        </section>
+
+              <section
+        class="bg-ink py-20 px-6 lg:px-16 relative overflow-hidden text-white cta-strip"
+      >
+        <div
+          class="max-w-350 mx-auto flex flex-col lg:flex-row items-center justify-between gap-10 relative z-10"
+        >
+          <div class="max-w-xl">
+            <h2 class="text-5xl lg:text-[65px] font-normal text-start leading-tight tracking-tight mb-10">
+              Create rare <br> moments with <br> your family <br> now
+            </h2>
+            <div class="flex flex-wrap gap-4">
+              <button
+                class="secondary-btn bg-white text-gray-900 font-medium px-7 py-3.5 rounded-md text-sm"
+              >
+                Schedule a tour
+              </button>
+              <a
+                href="./properties.html"
+                class="primary-btn bg-[#383838] text-white font-medium px-7 py-3.5 rounded-md text-sm"
+                >View clusters</a
+              >
             </div>
+          </div>
+
+          <div
+            class="relative w-full max-w-125 h-75 lg:h-100 flex items-center justify-center image-zoom rounded-2xl overflow-hidden"
+          >
+            <img src="./assets/footer.png" alt="Serenia homes" class="w-full h-full object-cover" />
           </div>
         </div>
       </section>
     </main>
-  </body>
+      <footer class="p-5 bg-ink">
+    <div class="bg-[#212121] text-gray-400 pt-16 pb-20 px-6 lg:px-16 border-t border-white/5">
+      <div class="max-w-350 mx-auto">
+        <div class="flex flex-col lg:flex-row justify-between items-start gap-10 mb-20">
+          <div>
+            <div class="flex items-center gap-2 font-bold text-2xl text-white mb-12">
+              <img src="./assets/gglolgo.png" alt="Serenia" class="h-10 w-auto" />
+            </div>
+            <div class="space-y-2 text-sm text-gray-300">
+              <p>sereniasupport@serenia.com</p>
+              <p>(+1) 345 - 3345 - 005</p>
+            </div>
+          </div>
+
+          <div class="max-w-md w-full">
+            <h3 class="text-2xl font-normal text-white mb-6 leading-snug">
+              Subscribe to get the latest information from us
+            </h3>
+            <form class="flex gap-3">
+              <input
+                type="email"
+                placeholder="Enter your email"
+                class="bg-[#181818] border border-white/10 text-sm px-4 py-3.5 rounded-md w-full focus:outline-none focus:border-white/30 text-white placeholder-gray-500"
+              />
+              <button
+                type="submit"
+                class="secondary-btn bg-white text-gray-900 font-medium px-6 py-3.5 rounded-md text-sm whitespace-nowrap"
+              >
+                Subscribe
+              </button>
+            </form>
+          </div>
+        </div>
+
+        <div class="grid grid-cols-2 md:grid-cols-4 gap-8 pt-12 border-t border-white/10 text-sm">
+          <div>
+            <h4 class="text-xs uppercase font-semibold text-gray-500 tracking-wider mb-6">
+              Company
+            </h4>
+            <ul class="space-y-4 text-gray-300">
+              <li><a href="./home.html" class="hover:text-white transition">About us</a></li>
+              <li><a href="./contactus.html" class="hover:text-white transition">Careers</a></li>
+              <li>
+                <a href="./blogs.html" class="hover:text-white transition">Press &amp; Media</a>
+              </li>
+              <li>
+                <a href="./contactus.html" class="hover:text-white transition">Opportunity</a>
+              </li>
+            </ul>
+          </div>
+          <div>
+            <h4 class="text-xs uppercase font-semibold text-gray-500 tracking-wider mb-6">
+              Services
+            </h4>
+            <ul class="space-y-4 text-gray-300">
+              <li>
+                <a href="./properties.html" class="hover:text-white transition"
+                  >Property listings</a
+                >
+              </li>
+              <li>
+                <a href="./calendar.html" class="hover:text-white transition">Progress tracking</a>
+              </li>
+              <li>
+                <a href="./gallery.html" class="hover:text-white transition">Virtual tours</a>
+              </li>
+              <li>
+                <a href="./contactus.html" class="hover:text-white transition">Consultation</a>
+              </li>
+            </ul>
+          </div>
+          <div>
+            <h4 class="text-xs uppercase font-semibold text-gray-500 tracking-wider mb-6">
+              Resources
+            </h4>
+            <ul class="space-y-4 text-gray-300">
+              <li>
+                <a href="./blogs.html" class="hover:text-white transition">Blog &amp; articles</a>
+              </li>
+              <li><a href="./contactus.html" class="hover:text-white transition">FAQs</a></li>
+              <li>
+                <a href="./blogs.html" class="hover:text-white transition">Guide &amp; Tutorials</a>
+              </li>
+              <li>
+                <a href="./contactus.html" class="hover:text-white transition">Help Center</a>
+              </li>
+            </ul>
+          </div>
+          <div>
+            <h4 class="text-xs uppercase font-semibold text-gray-500 tracking-wider mb-6">Legal</h4>
+            <ul class="space-y-4 text-gray-300">
+              <li><a href="#" class="hover:text-white transition">Privacy Policy</a></li>
+              <li><a href="#" class="hover:text-white transition">Terms &amp; Conditions</a></li>
+              <li><a href="#" class="hover:text-white transition">Cookie policy</a></li>
+              <li><a href="#" class="hover:text-white transition">Disclaimer</a></li>
+            </ul>
+          </div>
+        </div>
+      </div>
+      </div>
+    </footer>
+
+</body>
 </html>
