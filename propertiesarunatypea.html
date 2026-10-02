@@ -1,0 +1,591 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Aruna - Type A | Serenia</title>
+    <link rel="stylesheet" href="../src/output.css" />
+    <link rel="stylesheet" href="./css/serenia.css" />
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.5.1/css/all.min.css" />
+    <style>
+        body {
+            font-family: 'Plus Jakarta Sans', Arial, Helvetica, sans-serif;
+            color: #0f172a;
+            background-color: #f8fafc;
+        }
+        .accordion-box {
+            border: 1px solid #e2e8f0;
+            background-color: #ffffff;
+        }
+        .spec-box {
+            background-color: #f8fafc;
+            border: 1px solid #f1f5f9;
+            padding: 16px;
+        }
+    </style>
+</head>
+<body class="bg-[#f8fafc] text-slate-900 min-h-screen antialiased">
+
+    <nav
+      class="site-nav sticky top-0 z-50 flex min-h-20 w-full flex-wrap items-center justify-between gap-4 border-b border-gray-100 bg-white px-4 py-3 text-sm lg:flex-nowrap lg:px-16 lg:py-0"
+    >
+      <div class="flex items-center gap-2 font-bold text-2xl text-gray-900">
+        <a href="./home.html" aria-label="Serenia home"
+          ><img src="./assets/Logo (1).png" alt="logo" class="w-auto"
+        /></a>
+      </div>
+      <div class="hidden lg:block">
+        <ul class="flex gap-8 lg:gap-12 items-center text-gray-600 text-sm font-medium">
+          <li class="nav-link text-gray-900 border-b-2 border-gray-900 pb-2">
+            <a href="./properties.html">Properties</a>
+          </li>
+          <li class="nav-link"><a href="./amenities.html">Amenities</a></li>
+          <li class="nav-link">
+            <a href="./gallery.html">Gallery</a>
+          </li>
+          <li class="nav-link"><a href="./blogs.html">Blogs</a></li>
+        </ul>
+      </div>
+      <div class="hidden lg:block">
+        <ul class="flex gap-4 lg:gap-6 items-center">
+          <li class="nav-link px-4 py-3 font-medium text-gray-600">
+            <a href="./contactus.html">Contact us</a>
+          </li>
+          <li class="action-btn bg-stone font-medium px-5 py-3 text-gray-800 rounded-md">
+            <a href="./contactus.html">Request tour</a>
+          </li>
+        </ul>
+      </div>
+      <details class="relative ml-auto lg:hidden">
+        <summary aria-label="Open navigation menu" class="flex h-11 w-11 cursor-pointer list-none items-center justify-center rounded border border-gray-200 text-gray-800 hover:bg-stone [&::-webkit-details-marker]:hidden">
+          <svg class="h-5 w-5" viewBox="0 0 24 24" fill="none" stroke="currentColor" aria-hidden="true"><path d="M4 7h16M4 12h16M4 17h16" stroke-linecap="round" stroke-width="1.8" /></svg>
+        </summary>
+        <div class="absolute right-0 top-full z-50 mt-2 w-72 max-w-[calc(100vw-2rem)] border border-gray-200 bg-white p-3 shadow-lg">
+          <a href="./properties.html" class="block rounded px-3 py-2 text-gray-700 hover:bg-stone" aria-current="page">Properties</a>
+          <a href="./amenities.html" class="block rounded px-3 py-2 text-gray-700 hover:bg-stone">Amenities</a>
+          <a href="./gallery.html" class="block rounded px-3 py-2 text-gray-700 hover:bg-stone">Gallery</a>
+          <a href="./blogs.html" class="block rounded px-3 py-2 text-gray-700 hover:bg-stone">Blogs</a>
+          <a href="./contactus.html" class="block rounded px-3 py-2 text-gray-700 hover:bg-stone">Contact us</a>
+          <a href="./contactus.html" class="mt-2 block rounded bg-olive px-3 py-2 text-center font-medium text-white hover:bg-olive-dark">Request tour</a>
+        </div>
+      </details>
+    </nav>
+
+    <main class="max-w-350 mx-auto px-4 md:px-8 lg:px-12 py-6">
+
+        <div class="flex flex-col gap-3 sm:flex-row sm:items-center sm:justify-between text-xs text-slate-500 mb-4">
+            <div class="flex flex-wrap items-center gap-2">
+                <span>All clusters</span>
+                <span>/</span>
+                <span>Arena residence</span>
+                <span>/</span>
+                <span class="bg-slate-200 text-slate-800 p-2 w-20 text-center rounded-3xl font-medium">Type-A</span>
+            </div>
+            <div class="flex items-center gap-2">
+                <button class="flex items-center gap-1.5 h-10 w-20 bg-white border border-slate-200 px-3 py-1.5 hover:bg-slate-50 text-slate-700 font-medium text-xs">
+                    <i class="fa-solid fa-arrow-up-from-bracket"></i> Share
+                </button>
+                <button class="bg-white border border-slate-200 w-8 h-10 flex items-center justify-center hover:bg-slate-50 text-slate-700">
+                    <i class="fa-solid fa-ellipsis-vertical"></i>
+                </button>
+            </div>
+        </div>
+        <div class="relative w-full h-full lg:h-full mb-10 shadow-sm">
+            <img src="./assets/arunamain.png" alt="Aruna Type A Exterior" class="w-full h-full object-cover">
+
+            <div class="absolute bottom-6 left-1/2 -translate-x-1/2 flex items-center gap-2 bg-black/40 backdrop-blur-3xl p-2 border border-white/20">
+                <div class="w-16 h-12 overflow-hidden border-2 border-white/70 cursor-pointer"><img src="./assets/aruna1.png" class="w-full h-full object-cover" alt="thumb"></div>
+                <div class="w-16 h-12 overflow-hidden opacity-80 hover:opacity-100 cursor-pointer"><img src="./assets/aruna2.png" class="w-full h-full object-cover" alt="thumb"></div>
+                <div class="w-16 h-12 overflow-hidden opacity-80 hover:opacity-100 cursor-pointer"><img src="./assets/aruna3.png" class="w-full h-full object-cover" alt="thumb"></div>
+                <div class="w-16 h-12 overflow-hidden opacity-80 hover:opacity-100 cursor-pointer"><img src="./assets/aruna4.png" class="w-full h-full object-cover" alt="thumb"></div>
+                <div class="w-16 h-12 overflow-hidden opacity-80 hover:opacity-100 cursor-pointer"><img src="./assets/aruna5.png" class="w-full h-full object-cover" alt="thumb"></div>
+                <div class="w-16 h-12 overflow-hidden opacity-80 hover:opacity-100 cursor-pointer"><img src="./assets/aruna6.png" class="w-full h-full object-cover" alt="thumb"></div>
+            </div>
+            <div class="absolute bottom-2 left-1/2 -translate-x-1/2 w-7xl h-0.5 bg-white/30">
+                <div class="w-1/3 h-full bg-white"></div>
+            </div>
+        </div>
+
+        <div class="grid grid-cols-1 lg:grid-cols-12 gap-8 items-start">
+
+            <div class="lg:col-span-8 space-y-10">
+
+                <div class="bg-white p-6 border border-slate-100 shadow-sm space-y-6">
+                    <div class="flex flex-col sm:flex-row sm:items-center justify-between gap-4">
+                        <div>
+                            <h1 class="text-3xl lg:text-4xl mb-3 font-semibold text-slate-900 tracking-tight">Aruna - Type A</h1>
+                            <p class="text-xs text-slate-500 mt-1">Serenia Residences, Harmony Street No. 12, Selhurst, London, England</p>
+                        </div>
+                        <a href="" class="inline-flex items-center gap-1.5 text-xs font-semibold bg-stone hover:bg-stone-200 text-slate-800 px-3.5 py-2 transition-colors border border-slate-200 whitespace-nowrap self-start sm:self-auto">
+                            12 unit available <i class="fa-solid fa-arrow-right text-[10px]"></i>
+                        </a>
+                    </div>
+
+                    <div class="grid grid-cols-1 border border-slate-100 sm:grid-cols-3">
+                        <div class="spec-box flex items-center gap-3">
+                            <i class="fa-solid fa-ruler-combined text-gray-500 text-lg"></i>
+                            <div>
+                                <span class="block text-[11px] text-slate-400">Land & building size</span>
+                                <span class="text-xs font-bold text-slate-900">2,000 ft²</span>
+                            </div>
+                        </div>
+                        <div class="spec-box flex items-center gap-3">
+                            <i class="fa-solid fa-house text-gray-500 text-lg"></i>
+                            <div>
+                                <span class="block text-[11px] text-slate-400">House style</span>
+                                <span class="text-xs font-bold text-slate-900">Modern minimalist</span>
+                            </div>
+                        </div>
+                        <div class="spec-box flex items-center gap-3">
+                            <i class="fa-solid fa-layer-group text-gray-500 text-lg"></i>
+                            <div>
+                                <span class="block text-[11px] text-slate-400">Total floor</span>
+                                <span class="text-xs font-bold text-slate-900">Double floor</span>
+                            </div>
+                        </div>
+                        <div class="spec-box flex items-center gap-3">
+                            <i class="fa-solid fa-bed text-gray-500 text-lg"></i>
+                            <div>
+                                <span class="block text-[11px] text-slate-400">Bedrooms</span>
+                                <span class="text-xs font-bold text-slate-900">3 bedrooms</span>
+                            </div>
+                        </div>
+                        <div class="spec-box flex items-center gap-3">
+                            <i class="fa-solid fa-bath text-gray-500 text-lg"></i>
+                            <div>
+                                <span class="block text-[11px] text-slate-400">Bathrooms</span>
+                                <span class="text-xs font-bold text-slate-900">2 bathrooms</span>
+                            </div>
+                        </div>
+                        <div class="spec-box flex items-center gap-3">
+                            <i class="fa-solid fa-city text-gray-500 text-lg"></i>
+                            <div>
+                                <span class="block text-[11px] text-slate-400">Cluster</span>
+                                <span class="text-xs font-bold text-slate-900">Aruna residence</span>
+                            </div>
+                        </div>
+                    </div>
+                </div>
+
+                <div class="bg-white p-6 border border-slate-100 shadow-sm space-y-3">
+                    <h2 class="text-lg font-medium text-slate-900">About properties</h2>
+                    <p class="text-xs text-slate-600 leading-relaxed">
+                        Aruna Residence offers modern residences with minimalist designs that blend in with the green surroundings, providing comfort for dynamic families. Each unit is designed with an open layout that maximizes natural light and air circulation. With a spacious living room that connects directly to the backyard, this house supports a healthy and harmonious lifestyle.
+                    </p>
+                    <p class="text-xs text-slate-600 leading-relaxed">
+                        The master bedroom features a private balcony, offering privacy and stunning views of the green surroundings. The modern kitchen with an open-concept design makes cooking more enjoyable while strengthening family bonding moments. Aruna Residence is the perfect choice for young families and professionals seeking a home with a strategic location. <a href="#" class="font-medium text-gray-700 p-1 pl-1 border-b border-gray-500">Read more</a>
+                    </p>
+                </div>
+
+                <div class="bg-white p-6 border border-slate-100 shadow-sm space-y-4">
+                    <h2 class="text-lg font-medium text-slate-900">Locations</h2>
+                    <div class="w-full shadow-box">
+                        <div class="flex flex-col gap-6 md:flex-row md:items-center">
+                        <div class="w-full md:w-1/2 p-4">
+                            <div class="relative h-64 md:h-full bg-slate-50">
+                            <img src="./assets/maparuna.png" alt="Neighborhood Map" class="w-full h-full object-cover">
+                            <div class="absolute inset-0 bg-slate-900/10 flex items-center justify-center">
+                            </div>
+                        </div>
+                        </div>
+
+                        <div class="space-y-4 w-full md:w-1/2 p-4">
+                            <div class="text-slate-900 font-medium text-lg border-b border-slate-200 p-2 mb-2">This residence is near with :</div>
+
+                            <div class="flex items-center justify-between pb-3 border-b border-slate-100">
+                                <div>
+                                    <div class="font-semibold mb-2 text-slate-800">Greenfield International School</div>
+                                    <div class="text-[11px] text-slate-400">2.1 km • 5 min drive</div>
+                                </div>
+                                <i class="fa-solid fa-graduation-cap text-slate-400 text-sm"></i>
+                            </div>
+
+                            <div class="flex items-center justify-between pb-3 border-b border-slate-100">
+                                <div>
+                                    <div class="font-semibold mb-2 text-slate-800">Selhurst Mall & Lifestyle Center</div>
+                                    <div class="text-[11px] text-slate-400">3.4 km • 10 min drive</div>
+                                </div>
+                                <i class="fa-solid fa-bag-shopping text-slate-400 text-sm"></i>
+                            </div>
+
+                            <div class="flex items-center justify-between pb-3 border-b border-slate-100">
+                                <div>
+                                    <div class="font-semibold mb-2 text-slate-800">Royal Care Hospital</div>
+                                    <div class="text-[11px] text-slate-400">4.8 km • 12 min drive</div>
+                                </div>
+                                <i class="fa-solid fa-hospital text-slate-400 text-sm"></i>
+                            </div>
+
+                            <div class="flex items-center justify-between">
+                                <div>
+                                    <div class="font-semibold mb-2 text-slate-800">Selhurst Central Station</div>
+                                    <div class="text-[11px] text-slate-400">2.7 km • 8 min drive</div>
+                                </div>
+                                <i class="fa-solid fa-train text-slate-400 text-sm"></i>
+                            </div>
+                        </div>
+                    </div>
+                    </div>
+                </div>
+
+                <div class="bg-white p-6 border border-slate-100 shadow-sm space-y-6">
+                    <h2 class="text-lg font-bold text-slate-900">Gallery</h2>
+
+                    <div class="flex flex-wrap gap-2 text-xs font-medium border-b border-slate-100 pb-3">
+                        <button class="px-4 py-1.5 text-slate-500 hover:bg-stone">Outside</button>
+                        <button class="px-4 py-1.5 bg-stone text-slate-900 font-bold">Bedroom</button>
+                        <button class="px-4 py-1.5 text-slate-500 hover:bg-stone">Bathroom</button>
+                        <button class="px-4 py-1.5 text-slate-500 hover:bg-stone">Kitchen</button>
+                        <button class="px-4 py-1.5 text-slate-500 hover:bg-stone">Backyard</button>
+                        <button class="px-4 py-1.5 text-slate-500 hover:bg-stone">Family room</button>
+                        <button class="px-4 py-1.5 text-slate-500 hover:bg-stone">Street</button>
+                    </div>
+
+                    <div class="grid grid-cols-1 md:grid-cols-12 gap-3">
+                        <div class="md:col-span-8 overflow-hidden h-[340px]">
+                            <img src="./assets/mainbed.png" alt="Master Bedroom" class="w-full h-full object-cover">
+                        </div>
+                        <div class="md:col-span-4 flex flex-col gap-2.5 h-[340px]">
+                            <div class="h-1/3 overflow-hidden"><img src="./assets/bedroom (1).png" class="w-full h-full object-cover" alt="Bedroom detail"></div>
+                            <div class="h-1/3 overflow-hidden"><img src="./assets/bedroom (2).png" class="w-full h-full object-cover" alt="Bedroom window"></div>
+                            <div class="h-1/3 overflow-hidden"><img src="./assets/bedroom (3).png" class="w-full h-full object-cover" alt="Closet space"></div>
+                        </div>
+                    </div>
+                </div>
+
+                <div class="bg-white p-6 shadow-box space-y-4">
+                    <h2 class="text-lg font-medium text-slate-900 mb-2">Full specifications</h2>
+
+                    <div class="space-y-3">
+                        <div class="accordion-box overflow-hidden">
+                            <div class="p-4 bg-white flex items-center justify-between font-medium text-xs text-slate-900 cursor-pointer shadow-box">
+                                <span>Interior Features</span>
+                                <span class="text-slate-400 font-bold">−</span>
+                            </div>
+                            <div class="p-4 bg-white text-xs space-y-2.5 text-slate-600">
+                                <div class="flex">
+                                    <div class=" flex font-semibold text-slate-800"><p class="pr-3">•</p> Flooring</div>
+                                    <div class="pl-17.5">: Polished 60x60 cm granite tiles throughout living and dining areas.</div>
+                                </div>
+                                <div class="flex">
+                                    <div class="font-semibold text-slate-800 flex"> <p class="pr-3">•</p> Lightning</div>
+                                    <div class="pl-16">: LED fixtures with dimmable switches in living room and bedrooms.</div>
+                                </div>
+                                <div class="flex">
+                                    <div class="font-semibold text-slate-800 flex"> <p class="pr-3">•</p> Appliances</div>
+                                    <div class="pl-13.5">: Included built-in electric stove, range hood, and sink in an open-concept kitchen.</div>
+                                </div>
+                                <div class="flex">
+                                    <div class="font-semibold text-slate-800 flex"> <p class="pr-3">•</p> Design Details</div>
+                                    <div class="pl-9">: Vaulted ceiling in living area; large corner windows for ample natural light.</div>
+                                </div>
+                                <div class="flex">
+                                    <div class="font-semibold text-slate-800 flex"> <p class="pr-3">•</p> Smart Elements</div>
+                                    <div class="pl-7">: Wi-Fi-enabled smart lighting control and keyless smart door lock system.</div>
+                                </div>
+                            </div>
+                        </div>
+
+                        <div class="accordion-box p-4 flex items-center justify-between font-medium text-xs text-slate-900 cursor-pointer shadow-box">
+                            <span>Property & Layout</span>
+                            <span class="text-slate-400 font-bold">+</span>
+                        </div>
+
+                        <div class="accordion-box p-4 flex items-center justify-between font-medium text-xs text-slate-900 cursor-pointer hover:bg-slate-50">
+                            <span>Construction & Materials</span>
+                            <span class="text-slate-400 font-bold">+</span>
+                        </div>
+                        <div class="accordion-box p-4 flex items-center justify-between font-medium text-xs text-slate-900 cursor-pointer hover:bg-slate-50">
+                            <span>Utilities & Green Energy</span>
+                            <span class="text-slate-400 font-bold">+</span>
+                        </div>
+                        <div class="accordion-box p-4 flex items-center justify-between font-medium text-xs text-slate-900 cursor-pointer hover:bg-slate-50">
+                            <span>Community & Amenities</span>
+                            <span class="text-slate-400 font-bold">+</span>
+                        </div>
+                    </div>
+                </div>
+
+                <div class="bg-white p-6 border border-slate-100 shadow-sm space-y-6">
+                    <h2 class="text-lg font-bold text-slate-900">Floor plan</h2>
+
+                    <div class="grid grid-cols-1 md:grid-cols-12 gap-8 items-start">
+                        <div class="md:col-span-6 space-y-4">
+                            <div class="flex items-center gap-2 bg-stone p-1 text-xs font-medium w-max">
+                                <button class="px-4 py-1.5 bg-white text-slate-900 shadow-sm font-semibold">Ground floor</button>
+                                <button class="px-4 py-1.5 text-slate-500 hover:text-slate-900">Upper floor</button>
+                            </div>
+
+                            <div class="bg-slate-50 border border-slate-200 p-4 h-72 flex items-center justify-center relative overflow-hidden">
+                                <img src="./assets/stupidbox.png" alt="Floorplan 3D" class="w-full h-full object-cover">
+                            </div>
+                        </div>
+                        <div class="md:col-span-6 space-y-4 text-xs pt-2">
+                            <div class="flex items-start gap-3 pb-3 border-b border-slate-100">
+                                <div class="w-5 h-5 bg-stone text-slate-800 font-bold text-[11px] flex rounded-full border-2 border-[#E7E8E8] items-center justify-center shrink-0">1</div>
+                                <div>
+                                    <div class="font-bold text-slate-900">Bedroom</div>
+                                    <div class="text-[11px] text-slate-500">Private and bright sleeping space for rest</div>
+                                </div>
+                            </div>
+
+                            <div class="flex items-start gap-3 pb-3 border-b border-slate-100">
+                                <div class="w-5 h-5 bg-stone text-slate-800 font-bold text-[11px] flex rounded-full border-2 border-[#E7E8E8] items-center justify-center shrink-0">2</div>
+                                <div>
+                                    <div class="font-bold text-slate-900">Kitchen</div>
+                                    <div class="text-[11px] text-slate-500">Functional modern kitchen for cooking</div>
+                                </div>
+                            </div>
+
+                            <div class="flex items-start gap-3 pb-3 border-b border-slate-100">
+                                <div class="w-5 h-5 bg-stone text-slate-800 font-bold text-[11px] flex rounded-full border-2 border-[#E7E8E8] items-center justify-center shrink-0">3</div>
+                                <div>
+                                    <div class="font-bold text-slate-900">Family room</div>
+                                    <div class="text-[11px] text-slate-500">Spacious living area for gathering</div>
+                                </div>
+                            </div>
+
+                            <div class="flex items-start gap-3 pb-3 border-b border-slate-100">
+                                <div class="w-5 h-5 bg-stone text-slate-800 font-bold text-[11px] flex rounded-full border-2 border-[#E7E8E8] items-center justify-center shrink-0">4</div>
+                                <div>
+                                    <div class="font-bold text-slate-900">Dining area</div>
+                                    <div class="text-[11px] text-slate-500">Cozy dining spot for meals</div>
+                                </div>
+                            </div>
+
+                            <div class="flex items-start gap-3 pb-3 border-b border-slate-100">
+                                <div class="w-5 h-5 bg-stone text-slate-800 font-bold text-[11px] flex rounded-full border-2 border-[#E7E8E8] items-center justify-center shrink-0">5</div>
+                                <div>
+                                    <div class="font-bold text-slate-900">Sliding door</div>
+                                    <div class="text-[11px] text-slate-500">Wide access to fresh air and light</div>
+                                </div>
+                            </div>
+
+                            <div class="flex items-start gap-3">
+                                <div class="w-5 h-5 bg-stone text-slate-800 font-bold text-[11px] flex rounded-full border-2 border-[#E7E8E8] items-center justify-center shrink-0">6</div>
+                                <div>
+                                    <div class="font-bold text-slate-900">Balcony</div>
+                                    <div class="text-[11px] text-slate-500">Relaxing outdoor corner with view</div>
+                                </div>
+                            </div>
+                        </div>
+                    </div>
+                </div>
+
+            </div>
+
+            <div class="lg:col-span-4 space-y-6 lg:top-24">
+
+                <div class="bg-white p-6 border border-slate-100 shadow-sm space-y-6">
+                    <h2 class="text-base font-bold text-slate-900">Price & payment</h2>
+
+                    <div class="shadow-boxxx p-4">
+                        <span class="text-xs text-[#5A5B5B] block mb-0.5">Total Price</span>
+                        <div class="text-3xl font-bold text-[#56593B]">$135,000</div>
+                    </div>
+
+                    <div class="space-y-3 text-xs border-t border-slate-100 pt-4">
+                        <div class="flex justify-between py-1 border-b border-slate-50">
+                            <span class="text-[#5A5B5B]">Monthly Installment</span>
+                            <span class="font-bold text-slate-900">From $750 / month</span>
+                        </div>
+                        <div class="flex justify-between py-1 border-b border-slate-50">
+                            <span class="text-[#5A5B5B]">Down Payment</span>
+                            <span class="font-bold text-slate-900">Min. 20%**</span>
+                        </div>
+                        <div class="flex justify-between py-1 border-b border-slate-50">
+                            <span class="text-[#5A5B5B]">Loan Tenure</span>
+                            <span class="font-bold text-slate-900">10 / 15 / 20 years</span>
+                        </div>
+                        <div class="flex justify-between py-1 border-b border-slate-50">
+                            <span class="text-[#5A5B5B]">Interest Rate</span>
+                            <span class="font-bold text-slate-900">5% fixed (first 3 years)</span>
+                        </div>
+                        <div class="flex justify-between py-1 border-b border-slate-50">
+                            <span class="text-[#5A5B5B]">Payment Methods</span>
+                            <span class="font-bold text-slate-900">Bank Transfer</span>
+                        </div>
+                        <div class="flex justify-between py-1 border-b border-slate-50">
+                            <span class="text-[#5A5B5B]">Additional Fees</span>
+                            <span class="font-bold text-slate-900">Notary, Tax, Admin</span>
+                        </div>
+                        <div class="flex justify-between py-1">
+                            <span class="text-[#5A5B5B]">Special Offers</span>
+                            <span class="font-bold text-slate-900">Free Legal Fee</span>
+                        </div>
+                    </div>
+
+                    <div class="space-y-2 pt-2">
+                        <button class="w-full py-3 bg-[#424d31] hover:bg-[#343e26] text-white text-xs font-semibold transition-colors flex items-center justify-center gap-2">
+                            <i class="fa-regular fa-calendar"></i> Schedule a tour
+                        </button>
+                        <button class="w-full py-3 bg-stone hover:bg-stone-200 text-slate-800 text-xs font-semibold transition-colors border border-slate-200">
+                            View more detail
+                        </button>
+                    </div>
+                </div>
+
+                <!-- 3D Preview Card -->
+                <div class="bg-white p-6 border border-slate-100 shadow-sm space-y-4">
+                    <h2 class="text-base font-bold text-slate-900">3D Preview</h2>
+
+                    <!-- Interactive Video Box -->
+                    <div class="relative w-full h-48 overflow-hidden group cursor-pointer border border-slate-200">
+                        <img src="./assets/imagevideo.png" alt="3D Virtual Room" class="w-full h-full object-cover">
+                        <div class="absolute inset-0 bg-black/30 group-hover:bg-black/20 transition-colors flex flex-col justify-between p-4 text-white">
+                            <div class="self-center my-auto w-12 h-12 bg-white/30 backdrop-blur flex items-center justify-center border border-white/50 text-white text-lg">
+                                <i class="fa-solid fa-play ml-0.5"></i>
+                            </div>
+                            <div>
+                                <div class="font-bold text-sm">Great experience</div>
+                                <div class="text-[11px] text-slate-200">Get a 3D preview with this feature before you buy it.</div>
+                            </div>
+                        </div>
+                    </div>
+
+                    <button class="w-full py-2.5 bg-stone hover:bg-stone-200 text-slate-800 text-xs font-semibold transition-colors border border-slate-200">
+                        Try 360 preview
+                    </button>
+                </div>
+
+            </div>
+
+        </div>
+
+    </main>
+
+      <section
+        class="bg-[#141414] py-20 px-6 lg:px-16 relative overflow-hidden text-white cta-strip"
+      >
+        <div
+          class="max-w-350 mx-auto flex flex-col lg:flex-row items-center justify-between gap-10 relative z-10"
+        >
+          <div class="max-w-xl">
+            <h2 class="text-5xl lg:text-[65px] font-normal leading-tight tracking-tight mb-10">
+              Create rare moments with your family now
+            </h2>
+            <div class="flex flex-wrap gap-4">
+              <button
+                class="secondary-btn bg-white text-gray-900 font-medium px-7 py-3.5 rounded-md text-sm"
+              >
+                Schedule a tour
+              </button>
+              <a
+                href="./properties.html"
+                class="primary-btn bg-[#383838] text-white font-medium px-7 py-3.5 rounded-md text-sm"
+                >View clusters</a
+              >
+            </div>
+          </div>
+
+          <div
+            class="relative w-full max-w-125 h-75 lg:h-100 flex items-center justify-center image-zoom rounded-2xl overflow-hidden"
+          >
+            <img src="./assets/footer.png" alt="Serenia homes" class="w-full h-full object-cover" />
+          </div>
+        </div>
+      </section>
+    </main>
+
+    <footer class="bg-[#212121] text-gray-400 pt-16 pb-20 px-6 lg:px-16 border-t border-white/5">
+      <div class="max-w-350 mx-auto">
+        <div class="flex flex-col lg:flex-row justify-between items-start gap-10 mb-20">
+          <div>
+            <div class="flex items-center gap-2 font-bold text-2xl text-white mb-12">
+              <img src="./assets/gglolgo.png" alt="Serenia" class="h-10 w-auto" />
+            </div>
+            <div class="space-y-2 text-sm text-gray-300">
+              <p>sereniasupport@serenia.com</p>
+              <p>(+1) 345 - 3345 - 005</p>
+            </div>
+          </div>
+
+          <div class="max-w-md w-full">
+            <h3 class="text-2xl font-normal text-white mb-6 leading-snug">
+              Subscribe to get the latest information from us
+            </h3>
+            <form class="flex gap-3">
+              <input
+                type="email"
+                placeholder="Enter your email"
+                class="bg-[#181818] border border-white/10 text-sm px-4 py-3.5 rounded-md w-full focus:outline-none focus:border-white/30 text-white placeholder-gray-500"
+              />
+              <button
+                type="submit"
+                class="secondary-btn bg-white text-gray-900 font-medium px-6 py-3.5 rounded-md text-sm whitespace-nowrap"
+              >
+                Subscribe
+              </button>
+            </form>
+          </div>
+        </div>
+
+        <div class="grid grid-cols-2 md:grid-cols-4 gap-8 pt-12 border-t border-white/10 text-sm">
+          <div>
+            <h4 class="text-xs uppercase font-semibold text-gray-500 tracking-wider mb-6">
+              Company
+            </h4>
+            <ul class="space-y-4 text-gray-300">
+              <li><a href="./home.html" class="hover:text-white transition">About us</a></li>
+              <li><a href="./contactus.html" class="hover:text-white transition">Careers</a></li>
+              <li>
+                <a href="./blogs.html" class="hover:text-white transition">Press &amp; Media</a>
+              </li>
+              <li>
+                <a href="./contactus.html" class="hover:text-white transition">Opportunity</a>
+              </li>
+            </ul>
+          </div>
+          <div>
+            <h4 class="text-xs uppercase font-semibold text-gray-500 tracking-wider mb-6">
+              Services
+            </h4>
+            <ul class="space-y-4 text-gray-300">
+              <li>
+                <a href="./properties.html" class="hover:text-white transition"
+                  >Property listings</a
+                >
+              </li>
+              <li>
+                <a href="./calendar.html" class="hover:text-white transition">Progress tracking</a>
+              </li>
+              <li>
+                <a href="./gallery.html" class="hover:text-white transition">Virtual tours</a>
+              </li>
+              <li>
+                <a href="./contactus.html" class="hover:text-white transition">Consultation</a>
+              </li>
+            </ul>
+          </div>
+          <div>
+            <h4 class="text-xs uppercase font-semibold text-gray-500 tracking-wider mb-6">
+              Resources
+            </h4>
+            <ul class="space-y-4 text-gray-300">
+              <li>
+                <a href="./blogs.html" class="hover:text-white transition">Blog &amp; articles</a>
+              </li>
+              <li><a href="./contactus.html" class="hover:text-white transition">FAQs</a></li>
+              <li>
+                <a href="./blogs.html" class="hover:text-white transition">Guide &amp; Tutorials</a>
+              </li>
+              <li>
+                <a href="./contactus.html" class="hover:text-white transition">Help Center</a>
+              </li>
+            </ul>
+          </div>
+          <div>
+            <h4 class="text-xs uppercase font-semibold text-gray-500 tracking-wider mb-6">Legal</h4>
+            <ul class="space-y-4 text-gray-300">
+              <li><a href="#" class="hover:text-white transition">Privacy Policy</a></li>
+              <li><a href="#" class="hover:text-white transition">Terms &amp; Conditions</a></li>
+              <li><a href="#" class="hover:text-white transition">Cookie policy</a></li>
+              <li><a href="#" class="hover:text-white transition">Disclaimer</a></li>
+            </ul>
+          </div>
+        </div>
+      </div>
+    </footer>
+
+</body>
+</html>
