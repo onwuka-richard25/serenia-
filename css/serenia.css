@@ -370,6 +370,71 @@ button:active:not(:disabled),
   max-width: 100%;
 }
 
+html:has(nav.site-nav details.group[open])::before {
+  position: fixed;
+  z-index: 40;
+  inset: 0;
+  content: "";
+  background: rgb(17 24 20 / 18%);
+  backdrop-filter: blur(5px);
+}
+
+body:has(nav.site-nav details.group[open]) {
+  animation: none;
+}
+
+nav.site-nav details.group[open] {
+  z-index: 60;
+}
+
+nav.site-nav details.group > div {
+  position: fixed;
+  z-index: 60;
+  top: 5rem;
+  right: 0;
+  left: 0;
+  width: min(1040px, calc(100vw - 2rem));
+  max-height: calc(100vh - 5rem);
+  margin-inline: auto;
+  margin-top: 0;
+  padding: 0;
+  overflow-y: auto;
+  border-radius: 0;
+  transform: none;
+  translate: none;
+}
+
+nav.site-nav details.group > div,
+nav.site-nav details.group > div * {
+  border-radius: 0;
+}
+
+nav.site-nav details.group > div > .grid > div:nth-child(2) > .absolute,
+nav.site-nav details.group > div > .grid > div:nth-child(2) > .absolute > div {
+  border-radius: 9999px;
+}
+
+.property-cluster-option {
+  color: #64748b;
+}
+
+.property-cluster-option:hover,
+.property-cluster-option-active {
+  background-color: #f5f5f4;
+  color: #111827;
+}
+
+.property-cluster-option:focus-visible {
+  position: relative;
+  z-index: 1;
+  outline: 2px solid #53583c;
+  outline-offset: -2px;
+}
+
+.property-cluster-option-active {
+  font-weight: 500;
+}
+
 @media (max-width: 767px) {
   .gallery-slide {
     flex-basis: 82%;
